@@ -154,7 +154,11 @@ class ResultsVisualizationWorkspace(QtWidgets.QWidget):
         self.property.currentIndexChanged.connect(self._render)
         self.time.currentIndexChanged.connect(self._render)
         self.representation.currentIndexChanged.connect(self._render)
-        self.opacity.valueChanged.connect(self._render)
+        self._opacity_render_timer = QtCore.QTimer(self)
+        self._opacity_render_timer.setSingleShot(True)
+        self._opacity_render_timer.setInterval(50)
+        self._opacity_render_timer.timeout.connect(self._render)
+        self.opacity.valueChanged.connect(lambda _: self._opacity_render_timer.start())
         self.legend.toggled.connect(self._render)
         self.log_scale.toggled.connect(self._render)
         reset.clicked.connect(self._reset)
@@ -305,11 +309,16 @@ class ResultsVisualizationWorkspace(QtWidgets.QWidget):
             has_array = bool(self._dataset.arrays)
             self.property.setVisible(has_array)
             self.property_label.setVisible(has_array)
+            blockers = [
+                QtCore.QSignalBlocker(self.representation),
+                QtCore.QSignalBlocker(self.log_scale),
+            ]
             rep = self.representation.findData(self._dataset.default_representation)
             self.representation.setCurrentIndex(max(0, rep))
             descriptor = self._dataset.arrays.get(self._dataset.default_array)
             self.log_scale.setChecked(bool(descriptor and descriptor.preferred_scale == "log"))
             self.log_scale.setEnabled(bool(descriptor and descriptor.kind == "continuous"))
+            del blockers
             self.canvas.engine.set_dataset(self._dataset) if self.canvas.engine else None
             self._show_dataset_notice()
             self._render()

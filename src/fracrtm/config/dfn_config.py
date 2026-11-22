@@ -173,8 +173,8 @@ class StochasticFamilyConfig:
     shape: str = "ell"
     size: SizeDistributionConfig = field(default_factory=SizeDistributionConfig)
     orientation: OrientationConfig = field(default_factory=OrientationConfig)
-    p32: float = 0.1
-    probability: float = 1.0
+    p32: float | None = 0.1
+    probability: float | None = 1.0
     hydraulic: HydraulicConfig = field(default_factory=HydraulicConfig)
     aspect: float = 1.0
     beta_distribution: int = 0
@@ -556,12 +556,16 @@ class DfnConfig:
                 e.append(msg("validation.stochastic.family.names.must.be.unique"))
             for x in self.stochastic_families:
                 e += x.validate(self.stop_rule.mode, self.orientation_mode)
-            if self.stop_rule.mode == "count" and (
-                not math.isclose(
-                    sum((x.probability for x in self.stochastic_families)),
-                    1,
-                    rel_tol=1e-08,
-                    abs_tol=1e-08,
+            if (
+                self.stop_rule.mode == "count"
+                and all(_finite(x.probability) for x in self.stochastic_families)
+                and (
+                    not math.isclose(
+                        sum((x.probability for x in self.stochastic_families)),
+                        1,
+                        rel_tol=1e-08,
+                        abs_tol=1e-08,
+                    )
                 )
             ):
                 e.append(

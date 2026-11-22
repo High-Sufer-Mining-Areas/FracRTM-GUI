@@ -126,18 +126,23 @@ class MainWindow(MainWindowPages, QtWidgets.QMainWindow):
         return False
 
     def _rebuild_results_workspace(self):
-        if self.workspace is None:
+        old = getattr(self, "results_workspace", None)
+        if old is not None:
+            self.visual_layout.removeWidget(old)
+            old.canvas.close()
+            old.deleteLater()
+        self.results_workspace = None
+        if self.page_stack.currentIndex() == 4:
+            self._ensure_results_workspace()
+
+    def _ensure_results_workspace(self):
+        if self.workspace is None or self.results_workspace is not None:
             return
         placeholder = getattr(self, "_no_project_visual_message", None)
         if placeholder is not None:
             self.visual_layout.removeWidget(placeholder)
             placeholder.deleteLater()
             self._no_project_visual_message = None
-        old = getattr(self, "results_workspace", None)
-        if old:
-            self.visual_layout.removeWidget(old)
-            old.canvas.close()
-            old.deleteLater()
         try:
             self.results_workspace = ResultsVisualizationWorkspace(
                 self.workspace.local_root, self._pflotran_config, self
@@ -150,6 +155,9 @@ class MainWindow(MainWindowPages, QtWidgets.QMainWindow):
     def _reload_visualization_artifacts(self):
         workspace = getattr(self, "results_workspace", None)
         if workspace is None:
+            return
+        if self.page_stack.currentIndex() != 4:
+            self._rebuild_results_workspace()
             return
         try:
             workspace.reload_artifacts(self._pflotran_config)

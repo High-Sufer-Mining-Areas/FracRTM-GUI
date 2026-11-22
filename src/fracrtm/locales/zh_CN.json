@@ -1722,5 +1722,6 @@
   "boundary_area.unsupported": "已安装边界转换器不支持请求的 boundary_cell_area 操作。",
   "boundary_area.invalid_output": "边界连接面积或文件结构无效：{file}",
   "boundary_area.mismatch": "实际写出的 boundary_cell_area 与请求值不一致：{file}",
-  "boundary_area.previous_signature": "上次运行转换器默认值：{value} m²（签名记录；boundary_conversion.json）"
+  "boundary_area.previous_signature": "上次运行转换器默认值：{value} m²（签名记录；boundary_conversion.json）",
+  "validation.uge_changed_during_read": "读取期间 UGE 文件发生变化：{path}。请等待写入完成后重新加载。"
 }

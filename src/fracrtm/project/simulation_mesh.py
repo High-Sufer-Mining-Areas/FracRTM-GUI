@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Protocol
 
-from .resources import BoundaryArtifact, ProjectArtifacts
+from .resources import DFN_POLYGONS_PATH, BoundaryArtifact, ProjectArtifacts
 
 
 @dataclass(frozen=True)
@@ -57,10 +57,11 @@ class DfnUdfmProvider:
         )
 
     def spatial_structure(self, project_directory: str | Path) -> Path | None:
-        discovered = ProjectArtifacts.discover(project_directory)
-        return (
-            discovered.project_root / discovered.dfn.polygons if discovered.dfn.polygons else None
-        )
+        path = Path(project_directory).expanduser().resolve() / DFN_POLYGONS_PATH
+        try:
+            return path if path.is_file() and path.stat().st_size > 0 else None
+        except OSError:
+            return None
 
 
 DEFAULT_MODEL_SOURCE = DfnUdfmProvider()

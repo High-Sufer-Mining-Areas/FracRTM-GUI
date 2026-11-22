@@ -3,7 +3,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from fracrtm.project.resources import ProjectArtifacts
 from fracrtm.project.simulation_mesh import DEFAULT_MODEL_SOURCE, ModelSourceProvider
 
 
@@ -34,7 +33,6 @@ class VisualizationArtifactResolver:
             from fracrtm.project.runs import get_run
 
             project = get_run(project, run_id).snapshot_directory
-        _discovered = ProjectArtifacts.discover(project)
         simulation_mesh = provider.simulation_mesh(project)
         grid = simulation_mesh.grid
         config_path = project / "pflotran" / "model_config.json"
@@ -46,9 +44,6 @@ class VisualizationArtifactResolver:
             config = PFLOTRANConfig.load_json(config_path)
             if config.grid.file:
                 grid = safe_resource(project, config.grid.file)
-
-        def resolved(relative):
-            return project / relative if relative else None
 
         output = project / "pflotran" / "output"
         visual = output / "visualization"

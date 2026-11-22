@@ -3,6 +3,10 @@
 from __future__ import annotations
 
 import hashlib
+import math
+import threading
+from collections import OrderedDict
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath, PureWindowsPath
 
@@ -35,6 +39,15 @@ def file_fingerprint(path):
         for block in iter(lambda: stream.read(1024 * 1024), b""):
             digest.update(block)
     return {"path": str(p.resolve()), "sha256": digest.hexdigest(), "size": p.stat().st_size}
+
+
+def file_fingerprints(paths):
+    """Hash independent result files with bounded I/O concurrency, preserving order."""
+    paths = list(paths)
+    if len(paths) < 4:
+        return [file_fingerprint(path) for path in paths]
+    with ThreadPoolExecutor(max_workers=4, thread_name_prefix="result-integrity") as pool:
+        return list(pool.map(file_fingerprint, paths))
 
 
 def safe_resource(project, relative):
@@ -84,10 +97,48 @@ def validated_ids(values, label="Cell IDs", *, unique=True):
     return ids
 
 
+_UGE_CACHE = OrderedDict()
+_UGE_CACHE_LOCK = threading.Lock()
+_UGE_CACHE_BYTES = 64 * 1024 * 1024
+
+
 def read_uge(path):
+    """Reuse validated, immutable arrays only after a full content hash check."""
     from fracrtm.runtime.resource_limits import conversion_budget
 
     conversion_budget([path])
+    identity = file_fingerprint(path)
+    key = (identity["path"], identity["sha256"])
+    with _UGE_CACHE_LOCK:
+        if key in _UGE_CACHE:
+            _UGE_CACHE.move_to_end(key)
+            return _UGE_CACHE[key]
+    volumes = _parse_uge(path)
+    if file_fingerprint(path) != identity:
+        raise OSError(msg("validation.uge_changed_during_read", path=path))
+    arrays = (volumes.ids, volumes.points, volumes.volumes, volumes.connections)
+    volumes = ControlVolumes(
+        *(np.frombuffer(a.tobytes(), dtype=a.dtype).reshape(a.shape) for a in arrays)
+    )
+    size = sum(a.nbytes for a in arrays)
+    if size <= _UGE_CACHE_BYTES:
+        with _UGE_CACHE_LOCK:
+            # Keep at most two meshes and 64 MiB of arrays, including historical runs.
+            _UGE_CACHE[key] = volumes
+            while (
+                len(_UGE_CACHE) > 2
+                or sum(
+                    a.nbytes
+                    for entry in _UGE_CACHE.values()
+                    for a in (entry.ids, entry.points, entry.volumes, entry.connections)
+                )
+                > _UGE_CACHE_BYTES
+            ):
+                _UGE_CACHE.popitem(last=False)
+    return volumes
+
+
+def _parse_uge(path):
     p = Path(path)
     with p.open("r", encoding="utf-8") as stream:
         header = stream.readline().split()
@@ -149,7 +200,7 @@ def read_uge(path):
                     )
                 )
             i, j = (int(fields[0]), int(fields[1]))
-            geometry = np.array([float(x) for x in fields[2:]])
+            geometry = [float(x) for x in fields[2:]]
             if i not in valid or j not in valid or i == j:
                 raise ValueError(
                     msg(
@@ -164,7 +215,7 @@ def read_uge(path):
                     msg("diagnostic.spatial_mapping.p.duplicate.connection.pair", p=p, pair=pair)
                 )
             seen.add(pair)
-            if not np.isfinite(geometry).all() or geometry[-1] <= 0:
+            if not all(math.isfinite(value) for value in geometry) or geometry[-1] <= 0:
                 raise ValueError(
                     msg("diagnostic.spatial_mapping.p.invalid.connection.geometry.area", p=p)
                 )

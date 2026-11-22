@@ -11,7 +11,6 @@ from fracrtm.ui.localization import format_message, ui_call, ui_construct
 
 from .localization import LANGUAGE_NAMES, SUPPORTED_LOCALES, current_locale, tr
 from .qt_helpers import AdaptiveDoubleSpinBox
-from .results_viewer import ResultsVisualizationWorkspace
 from .styles import UiMetrics
 
 
@@ -522,28 +521,14 @@ class MainWindowPages:
         heading = ui_construct(QtWidgets.QLabel, msg("nav.results"))
         heading.setObjectName("PageTitle")
         layout.addWidget(heading)
-        if self.workspace is None:
-            self.results_workspace = None
-            message = ui_construct(
-                QtWidgets.QLabel,
-                msg("text.create.or.open.a.project.before.viewing.results.and.visualization.data"),
-            )
-            message.setAlignment(QtCore.Qt.AlignCenter)
-            self._no_project_visual_message = message
-            layout.addWidget(message, 1)
-        else:
-            try:
-                self.results_workspace = ResultsVisualizationWorkspace(
-                    self.workspace.local_root, self._pflotran_config, page
-                )
-                layout.addWidget(self.results_workspace, 1)
-            except Exception as exc:
-                self.results_workspace = None
-                message = ui_construct(
-                    QtWidgets.QLabel, format_message("results.load_failed", reason=exc)
-                )
-                message.setAlignment(QtCore.Qt.AlignCenter)
-                layout.addWidget(message, 1)
+        self.results_workspace = None
+        message = ui_construct(
+            QtWidgets.QLabel,
+            msg("text.create.or.open.a.project.before.viewing.results.and.visualization.data"),
+        )
+        message.setAlignment(QtCore.Qt.AlignCenter)
+        self._no_project_visual_message = message
+        layout.addWidget(message, 1)
         self.regenerate_visualization_button = ui_construct(
             QtWidgets.QPushButton, msg("text.regenerate.selected.visualization")
         )
@@ -555,6 +540,8 @@ class MainWindowPages:
         self.page_stack.setCurrentIndex(index)
         for item, button in enumerate(self.nav_buttons):
             button.setChecked(item == index)
+        if index == 4:
+            self._ensure_results_workspace()
         if index == 5 and self._available_processors is None:
             self._refresh_available_processors()
 

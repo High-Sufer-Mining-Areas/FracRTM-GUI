@@ -1722,5 +1722,6 @@
   "boundary_area.unsupported": "The installed boundary converter does not support the requested boundary_cell_area operation.",
   "boundary_area.invalid_output": "Invalid boundary connection areas or structure: {file}",
   "boundary_area.mismatch": "Written boundary_cell_area does not match the requested value: {file}",
-  "boundary_area.previous_signature": "Converter default in last run: {value} m² (signature; boundary_conversion.json)"
+  "boundary_area.previous_signature": "Converter default in last run: {value} m² (signature; boundary_conversion.json)",
+  "validation.uge_changed_during_read": "The UGE file changed while being read: {path}. Reload after the writer has finished."
 }

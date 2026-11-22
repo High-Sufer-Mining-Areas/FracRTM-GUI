@@ -18,6 +18,7 @@ from .result_times import time_labels
 from .spatial_mapping import (
     coordinate_mapping,
     file_fingerprint,
+    file_fingerprints,
     read_hdf5_values,
     read_uge,
     safe_resource,
@@ -510,8 +511,7 @@ class ProjectVisualizationRepository:
         times = tuple((r[0] for r in records))
         paths = [r[1] for r in records]
         signature = json.dumps(
-            prepare_json([file_fingerprint(collection), *[file_fingerprint(p) for p in paths]]),
-            sort_keys=True,
+            prepare_json(file_fingerprints([collection, *paths])), sort_keys=True
         )
         key = ("results", run_id, signature)
         if key in self._cache:

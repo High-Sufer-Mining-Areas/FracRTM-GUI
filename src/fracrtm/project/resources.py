@@ -8,6 +8,7 @@ from fracrtm.messages import join_text
 from fracrtm.messages import message as msg
 
 SEMANTIC_BOUNDARIES = ("top", "bottom", "west", "east", "north", "south")
+DFN_POLYGONS_PATH = Path("dfn/dfnGen_output/polygons.dat")
 UDFM_INPUT_FILENAMES = (
     "reduced_mesh.inp",
     "normal_vectors.dat",
@@ -176,7 +177,7 @@ class ProjectArtifacts:
                 aperture=relative_if_file(dfn_dir / "aperture.dat"),
                 params=relative_if_file(dfn_dir / "params.txt"),
                 poly_info=relative_if_file(dfn_dir / "poly_info.dat"),
-                polygons=relative_if_file(dfn_dir / "dfnGen_output" / "polygons.dat"),
+                polygons=relative_if_file(root / DFN_POLYGONS_PATH),
                 full_mesh=relative_if_file(dfn_dir / "full_mesh.inp"),
             ),
             OctreeArtifacts(
