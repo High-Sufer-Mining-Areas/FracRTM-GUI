@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.1",
+  "domain_size": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "domain_size_increase": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "h": 0.1,
+  "fracture_model": {
+    "stochastic_families": [],
+    "user_defined_fractures": [
+      {
+        "id": "u1_f1",
+        "name": "Fracture 1",
+        "shape": "rect",
+        "radii": 0.6,
+        "aspect_ratio": 1.0,
+        "translation": [
+          -0.4,
+          0.0,
+          0.0
+        ],
+        "normal_vector": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "permeability": 1e-12
+      },
+      {
+        "id": "u1_f2",
+        "name": "Fracture 2",
+        "shape": "rect",
+        "radii": 1.0,
+        "aspect_ratio": 0.65,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "normal_vector": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "permeability": 1e-12
+      },
+      {
+        "id": "u1_f3",
+        "name": "Fracture 3",
+        "shape": "rect",
+        "radii": 0.6,
+        "aspect_ratio": 1.0,
+        "translation": [
+          0.4,
+          0.0,
+          0.2
+        ],
+        "normal_vector": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "permeability": 2e-12
+      },
+      {
+        "id": "u1_f4",
+        "name": "Fracture 4",
+        "shape": "rect",
+        "radii": 0.6,
+        "aspect_ratio": 1.0,
+        "translation": [
+          0.4,
+          0.0,
+          -0.2
+        ],
+        "normal_vector": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "permeability": 1e-12
+      }
+    ]
+  },
+  "connectivity": {
+    "filter_by_boundary": true,
+    "boundary_faces": [
+      "+x",
+      "-x"
+    ],
+    "keep_only_largest_cluster": true,
+    "keep_isolated_fractures": false
+  },
+  "fram": {
+    "enabled": true,
+    "rejects_per_fracture": 10,
+    "radii_list_increase": 0.1,
+    "print_reject_reasons": false,
+    "triple_intersections": false
+  },
+  "output": {
+    "output_all_radii": false,
+    "output_accepted_radii_per_family": true,
+    "output_final_radii_per_family": true,
+    "create_output_report": true
+  }
+}

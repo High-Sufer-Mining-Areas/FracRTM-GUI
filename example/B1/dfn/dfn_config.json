@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.1",
+  "domain_size": [
+    15.0,
+    15.0,
+    15.0
+  ],
+  "domain_size_increase": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "h": 0.1,
+  "fracture_model": {
+    "stochastic_families": [
+      {
+        "name": "Ellipse family 1",
+        "shape": "ell",
+        "size": {
+          "distribution": "tpl",
+          "alpha": 1.8,
+          "log_mean": 2.0,
+          "log_std": 0.5,
+          "exp_mean": 2.0,
+          "min_radius": 2.0,
+          "max_radius": 8.6,
+          "constant_radius": 10.0
+        },
+        "orientation": {
+          "dip": 60.0,
+          "strike": 0.0,
+          "theta": 75.0,
+          "phi": 45.0,
+          "trend": 0.0,
+          "plunge": 0.0,
+          "kappa": 10.0
+        },
+        "p32": null,
+        "probability": 0.5,
+        "hydraulic": {
+          "relationship": "correlated",
+          "constant_aperture": 1e-05,
+          "alpha": 5e-05,
+          "beta": 0.5
+        },
+        "aspect": 1.0,
+        "beta_distribution": 1,
+        "beta": 0.0,
+        "number_of_points": 12
+      },
+      {
+        "name": "Ellipse family 2",
+        "shape": "ell",
+        "size": {
+          "distribution": "tpl",
+          "alpha": 1.8,
+          "log_mean": 2.0,
+          "log_std": 0.5,
+          "exp_mean": 2.0,
+          "min_radius": 2.0,
+          "max_radius": 8.6,
+          "constant_radius": 10.0
+        },
+        "orientation": {
+          "dip": 60.0,
+          "strike": 0.0,
+          "theta": 75.0,
+          "phi": 135.0,
+          "trend": 0.0,
+          "plunge": 0.0,
+          "kappa": 10.0
+        },
+        "p32": null,
+        "probability": 0.5,
+        "hydraulic": {
+          "relationship": "correlated",
+          "constant_aperture": 1e-05,
+          "alpha": 5e-05,
+          "beta": 0.5
+        },
+        "aspect": 1.0,
+        "beta_distribution": 1,
+        "beta": 0.0,
+        "number_of_points": 12
+      }
+    ],
+    "user_defined_fractures": []
+  },
+  "connectivity": {
+    "filter_by_boundary": true,
+    "boundary_faces": [
+      "+x",
+      "-x"
+    ],
+    "keep_only_largest_cluster": true,
+    "keep_isolated_fractures": false
+  },
+  "fram": {
+    "enabled": true,
+    "rejects_per_fracture": 350,
+    "radii_list_increase": 0.0,
+    "print_reject_reasons": false,
+    "triple_intersections": false
+  },
+  "output": {
+    "output_all_radii": false,
+    "output_accepted_radii_per_family": true,
+    "output_final_radii_per_family": true,
+    "create_output_report": true
+  },
+  "seed": 3575503120,
+  "stop_rule": {
+    "mode": "count",
+    "n_poly": 30
+  },
+  "orientation_mode": "theta_phi"
+}

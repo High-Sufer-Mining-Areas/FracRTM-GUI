@@ -1,0 +1,37 @@
+{
+  "domainSize": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "domainSizeIncrease": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 1,
+  "stopCondition": 1,
+  "orientationOption": 0,
+  "angleOption": "degree",
+  "h": 0.1,
+  "visualizationMode": true,
+  "disableFram": false,
+  "rejectsPerFracture": 10,
+  "radiiListIncrease": 0.1,
+  "printRejectReasons": false,
+  "tripleIntersections": false,
+  "boundaryFaces": [
+    true,
+    true,
+    false,
+    false,
+    false,
+    false
+  ],
+  "keepOnlyLargestCluster": true,
+  "ignoreBoundaryFaces": false,
+  "keepIsolatedFractures": false,
+  "outputAllRadii": false,
+  "outputAcceptedRadiiPerFamily": true,
+  "outputFinalRadiiPerFamily": true
+}

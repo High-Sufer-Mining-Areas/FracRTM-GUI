@@ -1,0 +1,50 @@
+{
+  "parameter_source": "tool_default",
+  "requested_boundary_cell_area": null,
+  "units": "m^2",
+  "written_area_statistics": {
+    "boundary_top.ex": {
+      "count": 179,
+      "min": 0.1,
+      "max": 0.1,
+      "sha256": "ac8a1754d9810f2d845c73f62c05aefd249483415f39be39013557edb52b21a9"
+    },
+    "boundary_bottom.ex": {
+      "count": 179,
+      "min": 0.1,
+      "max": 0.1,
+      "sha256": "fcd3dddcc44afaf2dc64c2e96034fdc124c422e606d00d66552aa04baa707b2e"
+    },
+    "boundary_left_w.ex": {
+      "count": 179,
+      "min": 0.1,
+      "max": 0.1,
+      "sha256": "ddf45313a58c0c8b407085280ebc00b0319fc0d320f79c758be43a597231a582"
+    },
+    "boundary_right_e.ex": {
+      "count": 229,
+      "min": 0.1,
+      "max": 0.1,
+      "sha256": "ea2db18413be5ee7dc15a087d845c9ec2bd36a814402735acabad353622e48a6"
+    },
+    "boundary_front_n.ex": {
+      "count": 346,
+      "min": 0.1,
+      "max": 0.1,
+      "sha256": "d4836a163794fdf62384e4451eb080a3d92c5f50d2872065245aa195e52e0474"
+    },
+    "boundary_back_s.ex": {
+      "count": 346,
+      "min": 0.1,
+      "max": 0.1,
+      "sha256": "a255812a51661ca156991c2a497f9496b3f9e0282d3ac3da22b9a036437c0b46"
+    }
+  },
+  "method": "zone2ex",
+  "module": "pydfnworks.dfnFlow.pflotran",
+  "source": "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnFlow/pflotran.py",
+  "source_sha256": "a0754b23b3964981e5086ffe93b042d854720497712c99943e634141fea5e400",
+  "default_boundary_cell_area": 0.1,
+  "mesh_scale_h": 0.1,
+  "area_method_status": "requires_scientific_confirmation"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.1",
+  "base_cell_size": 1.0,
+  "refinement_levels": 2,
+  "output_directory_name": "octree",
+  "matrix_permeability": 1e-18,
+  "matrix_porosity": 0.01,
+  "boundary_area_mode": "tool_default",
+  "boundary_cell_area": null
+}

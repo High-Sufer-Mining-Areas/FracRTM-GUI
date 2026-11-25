@@ -1,0 +1,530 @@
+{"event": "progress", "stage": "preparing", "message": "Checking the DFN configuration", "message_data": {"key": "text.checking.the.dfn.configuration", "values": {}}}
+{"event": "progress", "stage": "building", "message": "Creating the pydfnWorks model", "message_data": {"key": "text.creating.the.pydfnworks.model", "values": {}}}
+
+===================================================================
+===================================================================
+===================================================================
+||\    _____         \               / ______  _______       /  \ 
+||  \  |     |\     | \             /  |    |  |     | | /  /    \ 
+||   \ |___  | \    |  \    /\     /   |    |  |_____| |/   |  |  |
+||   / |     |   \  |   \  /  \  /     |    |  |   \   |\    \  \ 
+||  /  |     |     \|    \/    \/      |____|  |    \  | \ |  |  |
+||/ ======================================================= \    /
+============================================================  \/
+===================================================================
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~ Program: DFNWorks V2.8  ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This program was prepared at Los Alamos National Laboratory (LANL),
+Earth and Environmental Sciences Division, Computational Earth
+Science Group (EES-16), Subsurface Flow and Transport Team.
+All rights in the program are reserved by the DOE and LANL.
+Permission is granted to the public to copy and use this software
+without charge, provided that this Notice and any statement of
+authorship are reproduced on all copies. Neither the U.S. Government
+nor LANS makes any warranty, express or implied, or assumes
+any liability or responsibility for the use of this software.
+
+Contact Information : dfnworks@lanl.gov
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+LA-CC-17-027
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(or copyright) 2018 Triad National Security, LLC. All rights reserved.
+ 
+This program was produced under U.S. Government contract 89233218CNA000001
+for Los Alamos National Laboratory (LANL), which is operated by Triad 
+National Security, LLC for the U.S. Department of Energy/National Nuclear
+Security Administration.
+
+This is free software; you can redistribute it and/or modify it under the
+terms of the GNU Lesser General Public License as published by the Free
+Software Foundation; either version 3.0 of the License, or (at your option)
+any later version. If software is modified to produce derivative works,
+such modified software should be clearly marked, so as not to confuse it with
+the version available from LANL.
+
+All rights in the program are reserved by Triad National Security, LLC, 
+and the U.S. Department of Energy/National Nuclear Security Administration.
+The Government is granted for itself and others acting on its behalf a 
+nonexclusive, paid-up, irrevocable worldwide license in this material 
+to reproduce, prepare derivative works, distribute copies to the public,
+perform publicly and display publicly, and to permit others to do so.
+
+The U.S. Government has rights to use, reproduce, and distribute this software.  
+NEITHER THE GOVERNMENT NOR TRIAD NATIONAL SECURITY, LLC MAKES ANY WARRANTY, 
+EXPRESS OR IMPLIED, OR ASSUMES ANY LIABILITY FOR THE USE OF THIS SOFTWARE.  
+If software is modified to  produce derivative works, such modified 
+software should be clearly marked, so as not to confuse it with the 
+version available from LANL.
+
+Additionally, this program is free software; you can redistribute it and/or 
+modify it under the terms of the GNU General Public License as published by the 
+Free Software Foundation; either version 2 of the License, or (at your option) 
+any later version. Accordingly, this program is distributed in the hope that it 
+will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+License for more details.
+ 
+Additionally, redistribution and use in source and binary forms, with or 
+without modification, are permitted provided that the following conditions are 
+met:
+1.       Redistributions of source code must retain the above copyright notice, 
+this list of conditions and the following disclaimer.
+
+2.      Redistributions in binary form must reproduce the above copyright 
+notice, this list of conditions and the following disclaimer in the 
+documentation and/or other materials provided with the distribution.
+
+3.      Neither the name of Los Alamos National Security, LLC, Los Alamos 
+National Laboratory, LANL, the U.S. Government, nor the names of its 
+contributors may be used to endorse or promote products derived from this 
+software without specific prior written permission.
+ 
+THIS SOFTWARE IS PROVIDED BY LOS ALAMOS NATIONAL SECURITY, LLC AND 
+CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL LOS ALAMOS NATIONAL 
+SECURITY, LLC OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR 
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER 
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+
+
+--> Creating DFN Object: Starting
+================================================================================
+
+--> Jobname: /root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work
+--> Local Jobname: work
+--> Number of Processors Requested: 4
+--> dfnGen filename : work_dfnGen_input.dat
+--> Local dfnGen filename : work_dfnGen_input.dat
+================================================================================
+
+
+--> Creating DFN Object: Complete
+--> Adding new facture family
+--> Family information for family # 1
+Name: number                                  Value: None
+Name: probability                             Value: 0.5
+Name: type                                    Value: {'rect': False, 'ellipse': True}
+Name: layer                                   Value: 0
+Name: region                                  Value: 0
+Name: p32                                     Value: None
+Name: aspect                                  Value: 1.0
+Name: number_of_points                        Value: 12
+Name: beta_distribution                       Value: 1
+Name: beta                                    Value: 0.0
+Name: fisher                                  Value: {'theta': 75.0, 'phi': 45.0, 'strike': None, 'dip': None, 'trend': None, 'plunge': None, 'kappa': 10.0}
+Name: distribution                            Value: {'tpl': True, 'log_normal': False, 'exp': False, 'constant': False}
+Name: tpl                                     Value: {'alpha': 1.8}
+Name: log_normal                              Value: {'mean': None, 'std': None}
+Name: exp                                     Value: {'mean': None}
+Name: constant                                Value: None
+Name: min_radius                              Value: 2.0
+Name: max_radius                              Value: 8.6
+Name: hydraulic_properties : variable : aperture
+Name: hydraulic_properties : function : correlated
+Name: hydraulic_properties : params : {'alpha': 5e-05, 'beta': 0.5}
+
+--> Adding new facture family
+--> Family information for family # 2
+Name: number                                  Value: None
+Name: probability                             Value: 0.5
+Name: type                                    Value: {'rect': False, 'ellipse': True}
+Name: layer                                   Value: 0
+Name: region                                  Value: 0
+Name: p32                                     Value: None
+Name: aspect                                  Value: 1.0
+Name: number_of_points                        Value: 12
+Name: beta_distribution                       Value: 1
+Name: beta                                    Value: 0.0
+Name: fisher                                  Value: {'theta': 75.0, 'phi': 135.0, 'strike': None, 'dip': None, 'trend': None, 'plunge': None, 'kappa': 10.0}
+Name: distribution                            Value: {'tpl': True, 'log_normal': False, 'exp': False, 'constant': False}
+Name: tpl                                     Value: {'alpha': 1.8}
+Name: log_normal                              Value: {'mean': None, 'std': None}
+Name: exp                                     Value: {'mean': None}
+Name: constant                                Value: None
+Name: min_radius                              Value: 2.0
+Name: max_radius                              Value: 8.6
+Name: hydraulic_properties : variable : aperture
+Name: hydraulic_properties : function : correlated
+Name: hydraulic_properties : params : {'alpha': 5e-05, 'beta': 0.5}
+
+{"event": "progress", "stage": "workspace", "message": "Creating an isolated run directory", "message_data": {"key": "text.creating.an.isolated.run.directory", "values": {}}}
+Current directory is now: /root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work
+Jobname is /root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work
+{"event": "progress", "stage": "checking_input", "message": "Running DFN.check_input()", "message_data": {"key": "text.running.dfn.check.input", "values": {}}}
+
+================================================================================
+Checking Input File
+
+Fracture Family order was not changed
+--> Clean output file name: dfnGen_output/work_dfnGen_input_clean.dat
+--> Checking General Parameters
+--> Checking Ellipse Family parameters
+Converting angleOption value from degree to 1 for dfnGen input
+--> Writing parameters to file dfnGen_output/work_dfnGen_input_clean.dat
+
+Checking Input File Complete
+================================================================================
+
+{"event": "progress", "stage": "creating_network", "message": "Running DFN.create_network()", "message_data": {"key": "text.running.dfn.create.network", "values": {}}}
+
+Starting DFNGen
+DFN Generator Input File: dfnGen_output/work_dfnGen_input_clean.dat
+
+Expecting Theta and phi for orientations
+
+h: 0.1
+
+Shape Families:
+Ellipse Family 1:
+Number of Vertices: 12
+Aspect Ratio: 1
+Beta (Rotation Around Normal Vector): 0 rad, 0 deg
+Theta: 1.309 rad, 75 deg
+Phi: 0.785398 rad, 45 deg 
+Kappa: 10
+Layer: Entire domain
+Region: Entire domain
+Distribution: Truncated Power-Law
+Alpha: 1.8
+Minimum Radius: 2m
+Maximum Radius: 8.6m
+Family Insertion Probability: 0.5
+
+Ellipse Family 2:
+Number of Vertices: 12
+Aspect Ratio: 1
+Beta (Rotation Around Normal Vector): 0 rad, 0 deg
+Theta: 1.309 rad, 75 deg
+Phi: 2.35619 rad, 135 deg 
+Kappa: 10
+Layer: Entire domain
+Region: Entire domain
+Distribution: Truncated Power-Law
+Alpha: 1.8
+Minimum Radius: 2m
+Maximum Radius: 8.6m
+Family Insertion Probability: 0.5
+
+
+Building radii lists for nPoly option...
+
+Building radii lists for nPoly option CompleteEstimated 15 fractures for Ellipse family 1
+Estimated 15 fractures for Ellipse family 2
+
+========================================================
+            Network Generation Complete
+========================================================
+Version of DFNGen: 2.2
+Time Stamp: Thu Nov 26 00:41:37 2026
+
+
+________________________________________________________
+
+Statistics Before Isolated Fractures Removed:
+
+Fractures: 30
+Truncated: 26
+
+Total Surface Area:     1513.13 m^2
+Total Fracture Density   (P30): 0.00888889
+Total Fracture Intensity (P32): 0.448335
+Family: 1
+    Accepted: 13
+    Rejected: 0
+    Layer: Whole Domain 
+    Region: Whole Domain 
+    Surface Area: 530.548 m^2
+    Fracture Intensity (P32): 0.1572
+
+Family: 2
+    Accepted: 17
+    Rejected: 0
+    Layer: Whole Domain 
+    Region: Whole Domain 
+    Surface Area: 982.581 m^2
+    Fracture Intensity (P32): 0.291135
+
+In cluster groups
+Number of fractures: 30
+Number of groups: 16
+
+________________________________________________________
+
+Statistics After Isolated Fractures Removed:
+Final Number of Fractures: 11
+Isolated Fractures Removed: 19
+Fractures before isolated fractures removed:: 30
+
+Total Surface Area:     692.647 m^2
+Total Fracture Density   (P30): 0.00325926
+Total Fracture Intensity (P32): 0.205229
+Family: 1
+    Fractures After Isolated Fracture Removal: 4
+    Isolated Fractures Removed: 9
+    Accepted: 13
+    Rejected: 0
+    Layer: Whole Domain 
+    Region: Whole Domain 
+    Surface Area: 185.359 m^2
+    Fracture Intensity (P32): 0.054921
+
+Family: 2
+    Fractures After Isolated Fracture Removal: 7
+    Isolated Fractures Removed: 10
+    Accepted: 17
+    Rejected: 0
+    Layer: Whole Domain 
+    Region: Whole Domain 
+    Surface Area: 507.288 m^2
+    Fracture Intensity (P32): 0.150308
+
+
+________________________________________________________
+
+
+30 Fractures Accepted (Before Isolated Fracture Removal)
+11 Final Fractures (After Isolated Fracture Removal)
+
+Total Fractures Rejected: 0
+Total Fractures Re-translated: 15
+
+Number of Triple Intersection Points (Before Isolated Fracture Removal): 0
+
+Intersection Statistics:
+    Number of Intersections: 18 
+    Intersections Shortened: 3 
+    Original Intersection (Before Intersection Shrinking) Length: 63.9382 m
+    Intersection Length Discarded: 0.494976 m
+    Final Intersection Length: 63.4432 m
+
+Rejection Statistics: 
+    3 Short Intersections 
+    0 Close to Node
+    10 Close to Edge
+    0 Vertex Close to Edge
+    0 Outside of Domain
+    2 Triple intersection Rejections
+    0 Intersections Close to Other Intersections
+
+
+________________________________________________________
+
+Fracture Estimation statistics:
+NOTE: If estimation and actual are very different, 
+expected family distributions might not be accurate. 
+If this is the case, try increasing or decreasing 
+the 'radiiListIncrease' option in the input file.
+
+Ellipse Family 1
+Estimated: 15
+Actual:    13
+
+Ellipse Family 2
+Estimated: 15
+Actual:    17
+
+
+________________________________________________________
+
+Seed: 3575503120
+/root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work/dfnGen_output
+
+Writing Graph Data Files
+Writing Polygon Files
+Writing Polygon Files Complete
+Writing Intersection Files
+Writing poly inp files
+Writing /root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work/dfnGen_output/../params.txt
+Writing Radii File (radii.dat)
+Writing Rejection Statistics File (rejections.dat)
+Writing User Fracture Rejection File (userFractureRejections.dat)
+Writing Family Definitions File (families.dat)
+Writing Fracture Translations File (translations.dat)
+Writing Connectivity Data (connectivity.dat)
+Writing Rotation Data File (poly_info.dat)
+Writing Normal Vectors into File (normal_vectors.dat)
+Writing Rotation Data File (rejectsPerAttempt.dat)
+Writing Boundary Files
+Writing Accepted Radii Files Per Family
+Writing Final Radii Files Per Family
+
+Lagrit Should Remove 22 Nodes (44/2 - 0)
+DFNGen - Complete
+--> Running DFNGEN
+Running:
+>>/root/dfnWorks-2.8/DFNGen/DFNGen dfnGen_output/work_dfnGen_input_clean.dat /root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work
+--> Parsing dfnWorks output and adding to object
+
+--> Parsing  params.txt
+--> Number of Fractures: 11
+--> h: 1.00e-01 m
+--> Visual mode is on
+--> Expected Number of dudded points: 22
+--> X Domain Size 15.0 m
+--> Y Domain Size 15.0 m
+--> Z Domain Size 15.0 m
+--> Parsing params.txt complete
+
+--> Loading Polygon information onto DFN object
+--> Data from polygons.dat stored on class in self.polygons
+
+--> Assign hydraulic properties: Starting 
+--> Assign hydraulic properties to fracture families : Starting 
+--> Working on Fracture Family 1
+--> Creating Perfectly Correlated aperture values based on fracture radius.
+
+ b = 5.00e-05 * r^0.5 m
+
+--> Complete
+
+--> Working on Fracture Family 2
+--> Creating Perfectly Correlated aperture values based on fracture radius.
+
+ b = 5.00e-05 * r^0.5 m
+
+--> Complete
+
+--> Assign hydraulic properties to fracture families : Complete 
+--> Inserting User Rectangles Hydraulic Params First
+--> Assign hydraulic properties: Complete 
+--------------------------------------------------------------------------------
+Generation Succeeded
+--------------------------------------------------------------------------------
+{"event": "progress", "stage": "preparing_continuum_inputs", "message": "Preparing UDFM geometry and writing fracture hydraulic properties", "message_data": {"key": "text.preparing.udfm.geometry.and.writing.fracture.hydraulic.properties", "values": {}}}
+--> Dumping values to files
+--> Using prefix None
+--> Writing aperture.dat
+--> Writing perm.dat
+--> Writing transmissivity.dat
+--> Writing dfnGen_output/fracture_info.dat
+--> Complete
+{"event": "progress", "stage": "creating_reduced_mesh", "message": "Generating reduced_mesh.inp for UDFM", "message_data": {"key": "text.generating.reduced.mesh.inp.for.udfm", "values": {}}}
+================================================================================
+Meshing DFN using LaGriT : Starting
+================================================================================
+--> Computing mesh resolution function
+--> Variable Mesh Resolution Selected
+*** Minimum distance [m] from intersection with constant resolution h/2 : 0.05
+*** Maximum distance [m] from intersection variable resolution : 1.0
+*** Upper bound on resolution [m] : 1.00
+
+*** Meshing function : 
+	r(d) = 0.05			for 0 < d < 0.50
+	r(d) = 0.10 * d + 0.05		for 0.50 <= d <= 95.50 
+	r(d) = 1.00 			for 95.50 <= d
+--> Computing mesh resolution function : complete 
+
+--> Creating scripts for LaGriT meshing
+--> Creating scripts for LaGriT meshing: complete
+
+================================================================================
+
+--> Triangulating 11 fractures using 4 processors
+
+	* Starting on Fracture 01 out of 11 *
+	* Starting on Fracture 10 out of 11 *
+
+--> Triangulating Polygons: Complete
+
+--> Total Time to Mesh Network:
+--> 1.00e-01 seconds	1.67e-03 minutes	2.79e-05 hours
+================================================================================
+* Checking for meshing issues.
+--> Writting partial merge scripts
+--> There are 3 fractures in each part
+--> Writting merge scripts: Complete 
+--> Writing : merge_network.lgi
+--> Writing : merge_network.lgi - complete
+================================================================================
+--> Merging triangulated fracture meshes using 4 processors.
+
+--> Initial merging complete. Time elapsed: 5.54e-02 seconds.
+
+================================================================================
+--> Starting Final Merge
+--> Final merge complete. Time elapsed: 5.32e-02 seconds
+--> Checking for final mesh
+--> Checking for final mesh: Complete
+--> The reduced mesh in reduced_mesh.inp has 118 nodes and 96 triangular elements
+
+--> Cleaning up directory after meshing
+--> Cleaning up directory after meshing complete
+--> Total Time to Mesh Network:
+--> 2.13e-01 seconds	3.55e-03 minutes	5.92e-05 hours
+
+================================================================================
+Meshing DFN using LaGriT : Complete
+================================================================================
+{"event": "progress", "stage": "creating_report", "message": "Generating the DFN quality report", "message_data": {"key": "text.generating.the.dfn.quality.report", "values": {}}}
+================================================================================
+Creating Report of DFN generation
+================================================================================
+
+--> Gathering Network Information
+--> There are 2 Fracture Families
+--> There are 30 fractures in the domain
+--> There are 11 fractures in the final network
+--> Plotting Information
+--> Plotting Fracture Locations
+--> Working on fracture family 1
+--> Working on x coordinates 
+--> Working on y coordinates 
+--> Working on z coordinates 
+--> Saving File family_1_centers.png
+--> Complete
+--> Working on fracture family 2
+--> Working on x coordinates 
+--> Working on y coordinates 
+--> Working on z coordinates 
+--> Saving File family_2_centers.png
+--> Complete
+--> Working on x coordinates 
+--> Working on y coordinates 
+--> Working on z coordinates 
+--> Saving File all_fracture_centers.png
+--> Complete
+--> Plotting Fracture Radii Distributions
+--> Working on family 1 which has a Truncated Power-Law distribution of radii.
+--> Saving File family_1_radii.png
+--> Working on family 2 which has a Truncated Power-Law distribution of radii.
+--> Saving File family_2_radii.png
+--> Plotting Rose Diagrams and Stereonets
+--> Plotting Entire Network Stereonet
+--> Plotting Densities
+--> Plotting Entire Network Rose Diagram
+--> Saving File network_orientations.png
+--> Working on fracture family 1
+--> Saving File family_1_orienations.png
+--> Working on fracture family 2
+--> Saving File family_2_orienations.png
+--> Plotting FRAM information
+
+--> Combing Images and Making PDF
+--> Making Table of Contents
+--> Working on Entire Network
+--> Working on Family 1
+--> Working on Family 2
+--> FRAM information
+--> Output report is written into work_output_report.pdf
+
+================================================================================
+Creating Report of DFN generation complete
+================================================================================
+
+{"event": "progress", "stage": "completed", "message": "DFN generation completed", "message_data": {"key": "text.dfn.generation.completed", "values": {}}}
+{"success": true, "stage": "completed", "job_directory": "/root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work", "started_at": "2026-11-25T16:41:36.443824+00:00", "finished_at": "2026-11-25T16:41:48.977337+00:00", "message": "DFN network generated successfully.", "manifest_path": "/root/FracRTMWorkspace/d6a8a884-bd2f-491f-a74d-01cc8aa8cfff/runs/dfn-0e50a2d3c2f2406c96d7259c6c07f981/work/fracrtm_run.json", "warnings": [], "message_data": {"key": "text.dfn.network.generated.successfully", "values": {}}}

@@ -1,0 +1,38 @@
+Ellipse Family: 1
+Global Family: 1
+Number of Vertices: 12
+Aspect Ratio: 1
+Beta (Rotation Around Normal Vector)-rad: 0
+Beta (Rotation Around Normal Vector)-deg: 0
+Theta-rad: 1.309
+Theta-deg: 75
+Phi-rad: 0.785398
+Phi-deg: 45
+Kappa: 10
+Layer: Entire domain
+Region: Entire domain
+Distribution: Truncated Power-Law
+Alpha: 1.8
+Minimum Radius (m): 2
+Maximum Radius (m): 8.6
+Family Insertion Probability: 0.5
+
+Ellipse Family: 2
+Global Family: 2
+Number of Vertices: 12
+Aspect Ratio: 1
+Beta (Rotation Around Normal Vector)-rad: 0
+Beta (Rotation Around Normal Vector)-deg: 0
+Theta-rad: 1.309
+Theta-deg: 75
+Phi-rad: 2.35619
+Phi-deg: 135
+Kappa: 10
+Layer: Entire domain
+Region: Entire domain
+Distribution: Truncated Power-Law
+Alpha: 1.8
+Minimum Radius (m): 2
+Maximum Radius (m): 8.6
+Family Insertion Probability: 0.5
+

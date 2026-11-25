@@ -1,0 +1,441 @@
+{
+  "schema_version": "2.0",
+  "template_id": "u1_dfnworks_2_8_udfm",
+  "simulation": {
+    "task_type": "flow",
+    "flow_state": "steady_state",
+    "saturation_state": "saturated",
+    "flow_mode": "RICHARDS",
+    "transport_mode": "GIRT"
+  },
+  "time": {
+    "final_time": 100000,
+    "final_unit": "s",
+    "initial_timestep": 1e-08,
+    "initial_timestep_unit": "s",
+    "maximum_timestep": 100000,
+    "maximum_timestep_unit": "s"
+  },
+  "numerical_methods": {
+    "mode": "recommended",
+    "flow": {
+      "newton": {
+        "maximum_iterations": 15,
+        "snes_type": "LINE_SEARCH",
+        "rtol": null,
+        "atol": 1e-50,
+        "itol": null,
+        "stol": 1e-08,
+        "dtol": 10000
+      },
+      "linear": {
+        "solver_type": "BCGS",
+        "preconditioner": "ILU",
+        "rtol": 1e-05,
+        "atol": 1e-50,
+        "dtol": 10000
+      }
+    },
+    "transport": {
+      "newton": {
+        "maximum_iterations": 15,
+        "snes_type": "LINE_SEARCH",
+        "rtol": null,
+        "atol": 1e-50,
+        "itol": null,
+        "stol": 1e-08,
+        "dtol": 10000
+      },
+      "linear": {
+        "solver_type": "BCGS",
+        "preconditioner": "ILU",
+        "rtol": 1e-05,
+        "atol": 1e-50,
+        "dtol": 10000
+      }
+    }
+  },
+  "grid": {
+    "grid_type": "unstructured_explicit",
+    "file": "octree/full_mesh.uge",
+    "gravity": {
+      "mode": "off",
+      "vector": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "fluid_properties": {
+    "diffusion_coefficient": 1e-12
+  },
+  "datasets": [
+    {
+      "id": "u1_permeability",
+      "name": "Permeability",
+      "file": "octree/mesh_permeability.h5",
+      "hdf5_dataset_name": "Permeability"
+    },
+    {
+      "id": "u1_porosity",
+      "name": "Porosity",
+      "file": "octree/mesh_porosity.h5",
+      "hdf5_dataset_name": "Porosity"
+    }
+  ],
+  "chemistry": {
+    "database": {
+      "relative_path": "",
+      "status": "invalid",
+      "message": "数据库文件不存在"
+    },
+    "aqueous_species": {
+      "primary_species": [],
+      "secondary_species": []
+    },
+    "gas_species": {
+      "passive_gases": []
+    },
+    "selected_minerals": [],
+    "mineral_kinetics": [],
+    "log_formulation": true,
+    "activity_coefficients": "default",
+    "update_porosity": false,
+    "update_permeability": false
+  },
+  "materials": [
+    {
+      "id": "fracture",
+      "name": "fracture",
+      "material_id": 1,
+      "porosity": {
+        "mode": "dataset",
+        "value": null,
+        "dataset_id": "u1_porosity"
+      },
+      "permeability": {
+        "mode": "dataset",
+        "isotropic": null,
+        "diagonal": null,
+        "dataset_id": "u1_permeability",
+        "anisotropic_dataset": false,
+        "dataset_x": null,
+        "dataset_y": null,
+        "dataset_z": null
+      },
+      "tortuosity": 0.5,
+      "longitudinal_dispersivity": 0,
+      "transverse_dispersivity_horizontal": 0,
+      "transverse_dispersivity_vertical": 0,
+      "characteristic_curve_id": "default"
+    },
+    {
+      "id": "matrix",
+      "name": "matrix",
+      "material_id": 2,
+      "porosity": {
+        "mode": "dataset",
+        "value": null,
+        "dataset_id": "u1_porosity"
+      },
+      "permeability": {
+        "mode": "dataset",
+        "isotropic": null,
+        "diagonal": null,
+        "dataset_id": "u1_permeability",
+        "anisotropic_dataset": false,
+        "dataset_x": null,
+        "dataset_y": null,
+        "dataset_z": null
+      },
+      "tortuosity": 0.5,
+      "longitudinal_dispersivity": 0,
+      "transverse_dispersivity_horizontal": 0,
+      "transverse_dispersivity_vertical": 0,
+      "characteristic_curve_id": "default"
+    }
+  ],
+  "characteristic_curves": [
+    {
+      "id": "default",
+      "name": "U1 Van Genuchten",
+      "model": "van_genuchten",
+      "alpha": 0.0001,
+      "m_or_lambda": 0.5,
+      "liquid_residual_saturation": 0.1,
+      "maximum_capillary_pressure": 100000000,
+      "permeability_function": "MUALEM_VG_LIQ",
+      "smooth": false
+    }
+  ],
+  "regions": [
+    {
+      "name": "all",
+      "region_type": "COORDINATES",
+      "source": "system",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "cell_ids": [],
+      "file_path": "",
+      "file_region_kind": "",
+      "coordinate_unit": "m",
+      "message": ""
+    },
+    {
+      "name": "top",
+      "region_type": "FILE",
+      "source": "auto",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": null,
+      "cell_ids": [],
+      "file_path": "octree/boundary_top.ex",
+      "file_region_kind": "boundary_surface",
+      "coordinate_unit": "m",
+      "message": ""
+    },
+    {
+      "name": "bottom",
+      "region_type": "FILE",
+      "source": "auto",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": null,
+      "cell_ids": [],
+      "file_path": "octree/boundary_bottom.ex",
+      "file_region_kind": "boundary_surface",
+      "coordinate_unit": "m",
+      "message": ""
+    },
+    {
+      "name": "west",
+      "region_type": "FILE",
+      "source": "auto",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": null,
+      "cell_ids": [],
+      "file_path": "octree/boundary_left_w.ex",
+      "file_region_kind": "boundary_surface",
+      "coordinate_unit": "m",
+      "message": ""
+    },
+    {
+      "name": "east",
+      "region_type": "FILE",
+      "source": "auto",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": null,
+      "cell_ids": [],
+      "file_path": "octree/boundary_right_e.ex",
+      "file_region_kind": "boundary_surface",
+      "coordinate_unit": "m",
+      "message": ""
+    },
+    {
+      "name": "north",
+      "region_type": "FILE",
+      "source": "auto",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": null,
+      "cell_ids": [],
+      "file_path": "octree/boundary_front_n.ex",
+      "file_region_kind": "boundary_surface",
+      "coordinate_unit": "m",
+      "message": ""
+    },
+    {
+      "name": "south",
+      "region_type": "FILE",
+      "source": "auto",
+      "status": "valid",
+      "coordinate": null,
+      "bounds": null,
+      "cell_ids": [],
+      "file_path": "octree/boundary_back_s.ex",
+      "file_region_kind": "boundary_surface",
+      "coordinate_unit": "m",
+      "message": ""
+    }
+  ],
+  "flow_conditions": [
+    {
+      "name": "initial",
+      "usage": "initial",
+      "form": "fixed_liquid_pressure",
+      "parameters": {
+        "value": 1013250,
+        "unit": "Pa"
+      },
+      "direction_semantics": "unknown"
+    },
+    {
+      "name": "inflow",
+      "usage": "boundary",
+      "form": "fixed_liquid_pressure",
+      "parameters": {
+        "value": 1100000,
+        "unit": "Pa"
+      },
+      "direction_semantics": "unknown"
+    },
+    {
+      "name": "outflow",
+      "usage": "boundary",
+      "form": "fixed_liquid_pressure",
+      "parameters": {
+        "value": 1000000,
+        "unit": "Pa"
+      },
+      "direction_semantics": "unknown"
+    }
+  ],
+  "chemical_constraints": [],
+  "transport_conditions": [],
+  "spatial_assignment": {
+    "condition_assignments": [
+      {
+        "name": "initial",
+        "usage": "initial",
+        "region_name": "all",
+        "flow_condition_name": "initial",
+        "transport_condition_name": null
+      },
+      {
+        "name": "INFLOW",
+        "usage": "boundary",
+        "region_name": "west",
+        "flow_condition_name": "inflow",
+        "transport_condition_name": null
+      },
+      {
+        "name": "OUTFLOW",
+        "usage": "boundary",
+        "region_name": "east",
+        "flow_condition_name": "outflow",
+        "transport_condition_name": null
+      }
+    ],
+    "material_mapping": {
+      "mode": "material_file",
+      "file_path": "octree/materials.h5",
+      "active_cell_count": 7978,
+      "mapped_cell_count": 7978,
+      "unmapped_cell_count": 0,
+      "items": [
+        {
+          "material_id": 1,
+          "material_name": "fracture",
+          "cell_count": 6078,
+          "property_status": "defined",
+          "message": ""
+        },
+        {
+          "material_id": 2,
+          "material_name": "matrix",
+          "cell_count": 1900,
+          "property_status": "defined",
+          "message": ""
+        }
+      ],
+      "status": "available",
+      "message": ""
+    }
+  },
+  "output": {
+    "snapshot_format": "VTK",
+    "schedule": {
+      "mode": "periodic_timestep",
+      "interval_value": 1,
+      "interval_unit": "d",
+      "specified_times": [],
+      "specified_times_unit": "d",
+      "timestep_interval": 1
+    },
+    "print_initial": false,
+    "print_final": true,
+    "velocity_at_center": false,
+    "save_final_input": true,
+    "flow_variables": {
+      "liquid_pressure": true,
+      "liquid_head": false,
+      "liquid_saturation": false,
+      "velocity": false,
+      "porosity": true,
+      "permeability": false,
+      "permeability_x": true,
+      "permeability_y": true,
+      "permeability_z": true
+    },
+    "chemistry_variables": {
+      "ph": false,
+      "all_primary_species": false,
+      "all_species": false,
+      "secondary_species": false,
+      "mineral_volume_fraction": false,
+      "mineral_rate": false,
+      "mineral_saturation_index": false
+    },
+    "mass_flowrate": true,
+    "mass_balance": true,
+    "mass_balance_file": {
+      "enabled": false,
+      "schedule": {
+        "mode": "periodic_timestep",
+        "interval_value": 1,
+        "interval_unit": "d",
+        "specified_times": [],
+        "specified_times_unit": "d",
+        "timestep_interval": 1
+      },
+      "regions": [],
+      "print_initial": true,
+      "print_final": true
+    },
+    "observation": {
+      "enabled": false,
+      "regions": [],
+      "schedule": {
+        "mode": "periodic_timestep",
+        "interval_value": 1,
+        "interval_unit": "d",
+        "specified_times": [],
+        "specified_times_unit": "d",
+        "timestep_interval": 1
+      },
+      "print_initial": true,
+      "print_final": true,
+      "flow_variables": {
+        "liquid_pressure": true,
+        "liquid_head": false,
+        "liquid_saturation": false,
+        "velocity": false,
+        "porosity": true,
+        "permeability": false,
+        "permeability_x": true,
+        "permeability_y": true,
+        "permeability_z": true
+      },
+      "chemistry_variables": {
+        "ph": false,
+        "all_primary_species": false,
+        "all_species": false,
+        "secondary_species": false,
+        "mineral_volume_fraction": false,
+        "mineral_rate": false,
+        "mineral_saturation_index": false
+      }
+    }
+  }
+}

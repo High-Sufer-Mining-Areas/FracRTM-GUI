@@ -1,0 +1,1592 @@
+{
+  "project_id": "3de0d2cd-4e11-4dcc-97c2-f0f956bfcabf",
+  "identity_location": "d:/fracrtm-gui/deliverables/json-only-full-rerun-20261126/example/b1",
+  "project_schema": "1.0",
+  "name": "B1",
+  "created_at": "2026-11-25T16:41:28.939720+00:00",
+  "artifact_records": {
+    "records/generation/dfn.json": {
+      "schema_version": "1.0",
+      "stage": "dfn",
+      "generated_at": "2026-11-25T16:41:51.716982+00:00",
+      "generation_id": "10c1aff4650a4cb381f5628b27886de2",
+      "run_id": "dfn-0e50a2d3c2f2406c96d7259c6c07f981",
+      "launch_identity": {
+        "stage": "dfn",
+        "configuration": {
+          "schema_version": "1.1",
+          "domain_size": [
+            15.0,
+            15.0,
+            15.0
+          ],
+          "domain_size_increase": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "h": 0.1,
+          "fracture_model": {
+            "stochastic_families": [
+              {
+                "name": "Ellipse family 1",
+                "shape": "ell",
+                "size": {
+                  "distribution": "tpl",
+                  "alpha": 1.8,
+                  "log_mean": 2.0,
+                  "log_std": 0.5,
+                  "exp_mean": 2.0,
+                  "min_radius": 2.0,
+                  "max_radius": 8.6,
+                  "constant_radius": 10.0
+                },
+                "orientation": {
+                  "dip": 60.0,
+                  "strike": 0.0,
+                  "theta": 75.0,
+                  "phi": 45.0,
+                  "trend": 0.0,
+                  "plunge": 0.0,
+                  "kappa": 10.0
+                },
+                "p32": null,
+                "probability": 0.5,
+                "hydraulic": {
+                  "relationship": "correlated",
+                  "constant_aperture": 1e-05,
+                  "alpha": 5e-05,
+                  "beta": 0.5
+                },
+                "aspect": 1.0,
+                "beta_distribution": 1,
+                "beta": 0.0,
+                "number_of_points": 12
+              },
+              {
+                "name": "Ellipse family 2",
+                "shape": "ell",
+                "size": {
+                  "distribution": "tpl",
+                  "alpha": 1.8,
+                  "log_mean": 2.0,
+                  "log_std": 0.5,
+                  "exp_mean": 2.0,
+                  "min_radius": 2.0,
+                  "max_radius": 8.6,
+                  "constant_radius": 10.0
+                },
+                "orientation": {
+                  "dip": 60.0,
+                  "strike": 0.0,
+                  "theta": 75.0,
+                  "phi": 135.0,
+                  "trend": 0.0,
+                  "plunge": 0.0,
+                  "kappa": 10.0
+                },
+                "p32": null,
+                "probability": 0.5,
+                "hydraulic": {
+                  "relationship": "correlated",
+                  "constant_aperture": 1e-05,
+                  "alpha": 5e-05,
+                  "beta": 0.5
+                },
+                "aspect": 1.0,
+                "beta_distribution": 1,
+                "beta": 0.0,
+                "number_of_points": 12
+              }
+            ],
+            "user_defined_fractures": []
+          },
+          "connectivity": {
+            "filter_by_boundary": true,
+            "boundary_faces": [
+              "+x",
+              "-x"
+            ],
+            "keep_only_largest_cluster": true,
+            "keep_isolated_fractures": false
+          },
+          "fram": {
+            "enabled": true,
+            "rejects_per_fracture": 350,
+            "radii_list_increase": 0.0,
+            "print_reject_reasons": false,
+            "triple_intersections": false
+          },
+          "output": {
+            "output_all_radii": false,
+            "output_accepted_radii_per_family": true,
+            "output_final_radii_per_family": true,
+            "create_output_report": true
+          },
+          "seed": 3575503120,
+          "stop_rule": {
+            "mode": "count",
+            "n_poly": 30
+          },
+          "orientation_mode": "theta_phi"
+        },
+        "resources": [],
+        "invalidation_tokens": {},
+        "fingerprint": "da41cb4885a0b94900e6771945347671b62c0dc6028aa40367e2afbb859c2210"
+      },
+      "products": [
+        {
+          "path": "dfn/aperture.dat",
+          "size": 358,
+          "sha256": "f3b5f68e487152ab36b512b89f7e5dc3280f07ee2ca3b1c2071729e3a6780437"
+        },
+        {
+          "path": "dfn/dfnGen_output/polygons.dat",
+          "size": 5540,
+          "sha256": "e7c8ba6a51dab8e4f5d6b15ca0134027d258cafa31bf7f8cf47efe4ff132d713"
+        },
+        {
+          "path": "dfn/normal_vectors.dat",
+          "size": 614,
+          "sha256": "5c56716e41315ef99e2e85db9babad2fd1d31c80dfdd58c14d26fdafb10ed877"
+        },
+        {
+          "path": "dfn/params.txt",
+          "size": 21,
+          "sha256": "de3f4e4981f80ebe7b172170ca7d01cf93ccddd30a90add8f3dd859e07524e77"
+        },
+        {
+          "path": "dfn/poly_info.dat",
+          "size": 1056,
+          "sha256": "6b929271882668daf3d32b20a802262ba6fac80038ebdacd0ed04324fc02210e"
+        },
+        {
+          "path": "dfn/reduced_mesh.inp",
+          "size": 13012,
+          "sha256": "3d01b8086af76da24a336ee67c2372480d819b6ede45867f7070cbf1aa213c3b"
+        },
+        {
+          "path": "dfn/translations.dat",
+          "size": 1234,
+          "sha256": "af1e889d1a1461ec552b68508dc7f2691a0799850dfbee6b041dd18db2bbb1e5"
+        }
+      ],
+      "product_fingerprint": "3894d1996a2c794c4034269d4489be4fa9a87ce80d7e92bdaef106d8c3495d01"
+    },
+    "records/generation/octree.json": {
+      "schema_version": "1.0",
+      "stage": "octree",
+      "generated_at": "2026-11-25T16:43:30.865520+00:00",
+      "generation_id": "68ba001ed1e5402daa59b140ab2d3fd5",
+      "run_id": "octree-f7a4cd4c038640f5bb45d8240e0a2c1b",
+      "launch_identity": {
+        "stage": "octree",
+        "configuration": {
+          "base_cell_size": 1.0,
+          "refinement_levels": 2,
+          "output_directory_name": "octree",
+          "boundary_area_mode": "tool_default",
+          "boundary_cell_area": null,
+          "dfn": {
+            "schema_version": "1.1",
+            "domain_size": [
+              15.0,
+              15.0,
+              15.0
+            ],
+            "domain_size_increase": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "h": 0.1,
+            "fracture_model": {
+              "stochastic_families": [
+                {
+                  "name": "Ellipse family 1",
+                  "shape": "ell",
+                  "size": {
+                    "distribution": "tpl",
+                    "alpha": 1.8,
+                    "log_mean": 2.0,
+                    "log_std": 0.5,
+                    "exp_mean": 2.0,
+                    "min_radius": 2.0,
+                    "max_radius": 8.6,
+                    "constant_radius": 10.0
+                  },
+                  "orientation": {
+                    "dip": 60.0,
+                    "strike": 0.0,
+                    "theta": 75.0,
+                    "phi": 45.0,
+                    "trend": 0.0,
+                    "plunge": 0.0,
+                    "kappa": 10.0
+                  },
+                  "p32": null,
+                  "probability": 0.5,
+                  "hydraulic": {
+                    "relationship": "correlated",
+                    "constant_aperture": 1e-05,
+                    "alpha": 5e-05,
+                    "beta": 0.5
+                  },
+                  "aspect": 1.0,
+                  "beta_distribution": 1,
+                  "beta": 0.0,
+                  "number_of_points": 12
+                },
+                {
+                  "name": "Ellipse family 2",
+                  "shape": "ell",
+                  "size": {
+                    "distribution": "tpl",
+                    "alpha": 1.8,
+                    "log_mean": 2.0,
+                    "log_std": 0.5,
+                    "exp_mean": 2.0,
+                    "min_radius": 2.0,
+                    "max_radius": 8.6,
+                    "constant_radius": 10.0
+                  },
+                  "orientation": {
+                    "dip": 60.0,
+                    "strike": 0.0,
+                    "theta": 75.0,
+                    "phi": 135.0,
+                    "trend": 0.0,
+                    "plunge": 0.0,
+                    "kappa": 10.0
+                  },
+                  "p32": null,
+                  "probability": 0.5,
+                  "hydraulic": {
+                    "relationship": "correlated",
+                    "constant_aperture": 1e-05,
+                    "alpha": 5e-05,
+                    "beta": 0.5
+                  },
+                  "aspect": 1.0,
+                  "beta_distribution": 1,
+                  "beta": 0.0,
+                  "number_of_points": 12
+                }
+              ],
+              "user_defined_fractures": []
+            },
+            "connectivity": {
+              "filter_by_boundary": true,
+              "boundary_faces": [
+                "+x",
+                "-x"
+              ],
+              "keep_only_largest_cluster": true,
+              "keep_isolated_fractures": false
+            },
+            "fram": {
+              "enabled": true,
+              "rejects_per_fracture": 350,
+              "radii_list_increase": 0.0,
+              "print_reject_reasons": false,
+              "triple_intersections": false
+            },
+            "output": {
+              "output_all_radii": false,
+              "output_accepted_radii_per_family": true,
+              "output_final_radii_per_family": true,
+              "create_output_report": true
+            },
+            "seed": 3575503120,
+            "stop_rule": {
+              "mode": "count",
+              "n_poly": 30
+            },
+            "orientation_mode": "theta_phi"
+          }
+        },
+        "resources": [
+          {
+            "path": "dfn/aperture.dat",
+            "size": 358,
+            "sha256": "f3b5f68e487152ab36b512b89f7e5dc3280f07ee2ca3b1c2071729e3a6780437"
+          },
+          {
+            "path": "dfn/dfnGen_output/back.dat",
+            "size": 4,
+            "sha256": "8391e9ff91c3c6402f9596a8c9e82d4ceaa7815687f5854f7e1a23b194be4968"
+          },
+          {
+            "path": "dfn/dfnGen_output/bottom.dat",
+            "size": 2,
+            "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+          },
+          {
+            "path": "dfn/dfnGen_output/connectivity.dat",
+            "size": 58,
+            "sha256": "f84a4146696081b005acf14ad07155d87743701416bf06f02de5d10aa180477a"
+          },
+          {
+            "path": "dfn/dfnGen_output/families.dat",
+            "size": 804,
+            "sha256": "464c50941b434536cffdf5cfa959c5890aa4492d114eac213f8fc85056a9e312"
+          },
+          {
+            "path": "dfn/dfnGen_output/fracture_info.dat",
+            "size": 382,
+            "sha256": "4503fdfef72c5c6ebf049f083430228880bd894ec30f68e3e49c7847a505a5e8"
+          },
+          {
+            "path": "dfn/dfnGen_output/front.dat",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "dfn/dfnGen_output/intersection_list.dat",
+            "size": 1097,
+            "sha256": "f08ac952c61e489fd7da7de35a90e8bd9c1050926efcf7389f95b210bc4f60d6"
+          },
+          {
+            "path": "dfn/dfnGen_output/left.dat",
+            "size": 6,
+            "sha256": "be9ed16d8052f3fbecab42315a5fe7c3a3c734fc25531a6c0218395e6232697f"
+          },
+          {
+            "path": "dfn/dfnGen_output/normal_vectors.dat",
+            "size": 614,
+            "sha256": "5c56716e41315ef99e2e85db9babad2fd1d31c80dfdd58c14d26fdafb10ed877"
+          },
+          {
+            "path": "dfn/dfnGen_output/polygons.dat",
+            "size": 5540,
+            "sha256": "e7c8ba6a51dab8e4f5d6b15ca0134027d258cafa31bf7f8cf47efe4ff132d713"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii.dat",
+            "size": 827,
+            "sha256": "4efbbba982953a23339f6bc7629241ac52a8560d86eb897bea315f69922a45da"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_AllAccepted_Fam_1.dat",
+            "size": 439,
+            "sha256": "00629f3afcf34b9eb4b31b1eccd4aed4bbf4541a2cf1f944b9b897a148f706fc"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_AllAccepted_Fam_2.dat",
+            "size": 511,
+            "sha256": "93787de0471c1c8a4395cfd30ff6376019aa743a25b280eaa050bb3a0446c321"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_Final_Fam_1.dat",
+            "size": 276,
+            "sha256": "0c2fc77cf67f41da327557fda9353ab0fd8238cab92edffd309f8b3ae4965534"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_Final_Fam_2.dat",
+            "size": 330,
+            "sha256": "3a90b09cee87c2e2d124f375f1853fd4c0b00adce42ebec1156958ebc4607b7f"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii_Final.dat",
+            "size": 385,
+            "sha256": "69b318fbf6ccb4ce6d6de856ecdb3066d51aff8d4a376e638e7bd1f8590cbb40"
+          },
+          {
+            "path": "dfn/dfnGen_output/rejections.dat",
+            "size": 153,
+            "sha256": "6ff294367ca85543cdf9007d51c893f61cf7343557bffb381f9149a8a05df873"
+          },
+          {
+            "path": "dfn/dfnGen_output/rejectsPerAttempt.dat",
+            "size": 60,
+            "sha256": "467ffa25725abae29597e2f2c17aabd2296a948d5efc755cce4a6bef2c1551fc"
+          },
+          {
+            "path": "dfn/dfnGen_output/right.dat",
+            "size": 9,
+            "sha256": "f489149f432f3a79098ebee801ee156d0b2e076c02ae620344d1bd5976046c10"
+          },
+          {
+            "path": "dfn/dfnGen_output/surface_area_Final.dat",
+            "size": 153,
+            "sha256": "f9444c291d0b90e7de9c54015a9f3b2ec1df1204966ffeca065e8accfc598a36"
+          },
+          {
+            "path": "dfn/dfnGen_output/top.dat",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "dfn/dfnGen_output/translations.dat",
+            "size": 1234,
+            "sha256": "af1e889d1a1461ec552b68508dc7f2691a0799850dfbee6b041dd18db2bbb1e5"
+          },
+          {
+            "path": "dfn/dfnGen_output/userFractureRejections.dat",
+            "size": 31,
+            "sha256": "c7223fd990d932a5b67dcbee945629f2358e20497322ac72a9eecc1029ca8709"
+          },
+          {
+            "path": "dfn/dfnGen_output/work_dfnGen_input_clean.dat",
+            "size": 1698,
+            "sha256": "b41044a6a73772b7f2cb9911aaf86a13dc4ef6ff6e7c943d3bac48780a1aeb91"
+          },
+          {
+            "path": "dfn/normal_vectors.dat",
+            "size": 614,
+            "sha256": "5c56716e41315ef99e2e85db9babad2fd1d31c80dfdd58c14d26fdafb10ed877"
+          },
+          {
+            "path": "dfn/params.txt",
+            "size": 21,
+            "sha256": "de3f4e4981f80ebe7b172170ca7d01cf93ccddd30a90add8f3dd859e07524e77"
+          },
+          {
+            "path": "dfn/poly_info.dat",
+            "size": 1056,
+            "sha256": "6b929271882668daf3d32b20a802262ba6fac80038ebdacd0ed04324fc02210e"
+          },
+          {
+            "path": "dfn/reduced_mesh.inp",
+            "size": 13012,
+            "sha256": "3d01b8086af76da24a336ee67c2372480d819b6ede45867f7070cbf1aa213c3b"
+          },
+          {
+            "path": "dfn/translations.dat",
+            "size": 1234,
+            "sha256": "af1e889d1a1461ec552b68508dc7f2691a0799850dfbee6b041dd18db2bbb1e5"
+          }
+        ],
+        "invalidation_tokens": {},
+        "fingerprint": "713dc94116177216371448820711696b7f6076ca76bdc3a539b7d9da2eef055c"
+      },
+      "products": [
+        {
+          "path": "octree/boundary_back_s.ex",
+          "size": 56618,
+          "sha256": "1710bbd92582ccd5d244ba8625e754b74cd63e5181eb472d766bd4519596e246"
+        },
+        {
+          "path": "octree/boundary_back_s.zone",
+          "size": 7483,
+          "sha256": "c069d6add1193e59f1b5441ac913665bedfd33f077e2dec7ad607ed4a68122d9"
+        },
+        {
+          "path": "octree/boundary_bottom.ex",
+          "size": 29161,
+          "sha256": "597de8f0fd80671877934aaaa8f153ed8ece8d2945effa3396ad0d18132733a6"
+        },
+        {
+          "path": "octree/boundary_bottom.zone",
+          "size": 3886,
+          "sha256": "77d1c564df798786bf5b0df2c080ee16b9fa623f1ea4a3199962a80e2ab8583f"
+        },
+        {
+          "path": "octree/boundary_conversion.json",
+          "size": 1526,
+          "sha256": "82f0344e1e5a43320b7f7872326c4e46b7b51592e0890020a3fb6ae335f927dd"
+        },
+        {
+          "path": "octree/boundary_front_n.ex",
+          "size": 21168,
+          "sha256": "bc659289a1016892f4fe0fd90e98187c0d1902a1c73af4a0e6090e8b7a68f1c2"
+        },
+        {
+          "path": "octree/boundary_front_n.zone",
+          "size": 2864,
+          "sha256": "799aff5fac9b1457aee2becc5189682d14e13e96da50f57138d1f6532d7d27d2"
+        },
+        {
+          "path": "octree/boundary_left_w.ex",
+          "size": 48791,
+          "sha256": "729921573e53c35d1d42aa4330ff1e9d76430ac349c64dc2f36771a6f61b89ca"
+        },
+        {
+          "path": "octree/boundary_left_w.zone",
+          "size": 6570,
+          "sha256": "0d9f935c538a3a89b81b85638fa50a567ba093240bab4a8f25483c17735f09db"
+        },
+        {
+          "path": "octree/boundary_right_e.ex",
+          "size": 50093,
+          "sha256": "9a3d990adf0caedfa24a842f532d7e241278f5b2ce9870fd4893016589dd5bed"
+        },
+        {
+          "path": "octree/boundary_right_e.zone",
+          "size": 6659,
+          "sha256": "9b25c395693299008f2c73225dfbbf39d5ec5ff6a8e14efbaa3b15bb40bf601e"
+        },
+        {
+          "path": "octree/boundary_top.ex",
+          "size": 21167,
+          "sha256": "2ce5aa9259c59e2a7bc52141ac7ef7eb79c2f7d33fdb711d6dec4a25becea1be"
+        },
+        {
+          "path": "octree/boundary_top.zone",
+          "size": 2860,
+          "sha256": "0b1370970b195267c252567406e6552827ec8d22a322a5543d47eec672b3db14"
+        },
+        {
+          "path": "octree/connections.p",
+          "size": 178415,
+          "sha256": "b8ef1a23a72a5e334ba0a33e1185100ae2ca1d3184f136b0bc07c979a1d19515"
+        },
+        {
+          "path": "octree/full_mesh.uge",
+          "size": 15732767,
+          "sha256": "4e08495160286594b6b6ce49ade38ef7e736d37eb4b090346257655bf7da21d0"
+        },
+        {
+          "path": "octree/octree_dfn.inp",
+          "size": 11158351,
+          "sha256": "d5315a8b0ea9812ba315b5aab10006d5a4e5de7ae5cb84a3b26fd3013e0c5d00"
+        },
+        {
+          "path": "octree/octree_dfn_material.zone",
+          "size": 354410,
+          "sha256": "6b8344a908da683d127c762699bb83f6be71d5332f7b257ffb2a706d0bdd2e73"
+        },
+        {
+          "path": "octree/octree_dfn_outside.zone",
+          "size": 30298,
+          "sha256": "64ebd390294e6394df93e57b1839664f1164a9c293f7d116d5473ae463289359"
+        }
+      ],
+      "product_fingerprint": "ab8865570082ea92b79527c016e0da5ccd12d9d3638d8de454b30bd7eb23192f"
+    },
+    "records/generation/upscale.json": {
+      "schema_version": "1.0",
+      "stage": "upscale",
+      "generated_at": "2026-11-25T16:44:09.397295+00:00",
+      "generation_id": "58dd409ef34c49daa3417dd7e5a8a14a",
+      "run_id": "upscale-a28047629640416aa3a6ca916c9f5543",
+      "launch_identity": {
+        "stage": "upscale",
+        "configuration": {
+          "base_cell_size": 1.0,
+          "refinement_levels": 2,
+          "output_directory_name": "octree",
+          "boundary_area_mode": "tool_default",
+          "boundary_cell_area": null,
+          "matrix_permeability": 1e-18,
+          "matrix_porosity": 0.01,
+          "dfn": {
+            "schema_version": "1.1",
+            "domain_size": [
+              15.0,
+              15.0,
+              15.0
+            ],
+            "domain_size_increase": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "h": 0.1,
+            "fracture_model": {
+              "stochastic_families": [
+                {
+                  "name": "Ellipse family 1",
+                  "shape": "ell",
+                  "size": {
+                    "distribution": "tpl",
+                    "alpha": 1.8,
+                    "log_mean": 2.0,
+                    "log_std": 0.5,
+                    "exp_mean": 2.0,
+                    "min_radius": 2.0,
+                    "max_radius": 8.6,
+                    "constant_radius": 10.0
+                  },
+                  "orientation": {
+                    "dip": 60.0,
+                    "strike": 0.0,
+                    "theta": 75.0,
+                    "phi": 45.0,
+                    "trend": 0.0,
+                    "plunge": 0.0,
+                    "kappa": 10.0
+                  },
+                  "p32": null,
+                  "probability": 0.5,
+                  "hydraulic": {
+                    "relationship": "correlated",
+                    "constant_aperture": 1e-05,
+                    "alpha": 5e-05,
+                    "beta": 0.5
+                  },
+                  "aspect": 1.0,
+                  "beta_distribution": 1,
+                  "beta": 0.0,
+                  "number_of_points": 12
+                },
+                {
+                  "name": "Ellipse family 2",
+                  "shape": "ell",
+                  "size": {
+                    "distribution": "tpl",
+                    "alpha": 1.8,
+                    "log_mean": 2.0,
+                    "log_std": 0.5,
+                    "exp_mean": 2.0,
+                    "min_radius": 2.0,
+                    "max_radius": 8.6,
+                    "constant_radius": 10.0
+                  },
+                  "orientation": {
+                    "dip": 60.0,
+                    "strike": 0.0,
+                    "theta": 75.0,
+                    "phi": 135.0,
+                    "trend": 0.0,
+                    "plunge": 0.0,
+                    "kappa": 10.0
+                  },
+                  "p32": null,
+                  "probability": 0.5,
+                  "hydraulic": {
+                    "relationship": "correlated",
+                    "constant_aperture": 1e-05,
+                    "alpha": 5e-05,
+                    "beta": 0.5
+                  },
+                  "aspect": 1.0,
+                  "beta_distribution": 1,
+                  "beta": 0.0,
+                  "number_of_points": 12
+                }
+              ],
+              "user_defined_fractures": []
+            },
+            "connectivity": {
+              "filter_by_boundary": true,
+              "boundary_faces": [
+                "+x",
+                "-x"
+              ],
+              "keep_only_largest_cluster": true,
+              "keep_isolated_fractures": false
+            },
+            "fram": {
+              "enabled": true,
+              "rejects_per_fracture": 350,
+              "radii_list_increase": 0.0,
+              "print_reject_reasons": false,
+              "triple_intersections": false
+            },
+            "output": {
+              "output_all_radii": false,
+              "output_accepted_radii_per_family": true,
+              "output_final_radii_per_family": true,
+              "create_output_report": true
+            },
+            "seed": 3575503120,
+            "stop_rule": {
+              "mode": "count",
+              "n_poly": 30
+            },
+            "orientation_mode": "theta_phi"
+          }
+        },
+        "resources": [
+          {
+            "path": "dfn/aperture.dat",
+            "size": 358,
+            "sha256": "f3b5f68e487152ab36b512b89f7e5dc3280f07ee2ca3b1c2071729e3a6780437"
+          },
+          {
+            "path": "dfn/dfnGen_output/back.dat",
+            "size": 4,
+            "sha256": "8391e9ff91c3c6402f9596a8c9e82d4ceaa7815687f5854f7e1a23b194be4968"
+          },
+          {
+            "path": "dfn/dfnGen_output/bottom.dat",
+            "size": 2,
+            "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+          },
+          {
+            "path": "dfn/dfnGen_output/connectivity.dat",
+            "size": 58,
+            "sha256": "f84a4146696081b005acf14ad07155d87743701416bf06f02de5d10aa180477a"
+          },
+          {
+            "path": "dfn/dfnGen_output/families.dat",
+            "size": 804,
+            "sha256": "464c50941b434536cffdf5cfa959c5890aa4492d114eac213f8fc85056a9e312"
+          },
+          {
+            "path": "dfn/dfnGen_output/fracture_info.dat",
+            "size": 382,
+            "sha256": "4503fdfef72c5c6ebf049f083430228880bd894ec30f68e3e49c7847a505a5e8"
+          },
+          {
+            "path": "dfn/dfnGen_output/front.dat",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "dfn/dfnGen_output/intersection_list.dat",
+            "size": 1097,
+            "sha256": "f08ac952c61e489fd7da7de35a90e8bd9c1050926efcf7389f95b210bc4f60d6"
+          },
+          {
+            "path": "dfn/dfnGen_output/left.dat",
+            "size": 6,
+            "sha256": "be9ed16d8052f3fbecab42315a5fe7c3a3c734fc25531a6c0218395e6232697f"
+          },
+          {
+            "path": "dfn/dfnGen_output/normal_vectors.dat",
+            "size": 614,
+            "sha256": "5c56716e41315ef99e2e85db9babad2fd1d31c80dfdd58c14d26fdafb10ed877"
+          },
+          {
+            "path": "dfn/dfnGen_output/polygons.dat",
+            "size": 5540,
+            "sha256": "e7c8ba6a51dab8e4f5d6b15ca0134027d258cafa31bf7f8cf47efe4ff132d713"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii.dat",
+            "size": 827,
+            "sha256": "4efbbba982953a23339f6bc7629241ac52a8560d86eb897bea315f69922a45da"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_AllAccepted_Fam_1.dat",
+            "size": 439,
+            "sha256": "00629f3afcf34b9eb4b31b1eccd4aed4bbf4541a2cf1f944b9b897a148f706fc"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_AllAccepted_Fam_2.dat",
+            "size": 511,
+            "sha256": "93787de0471c1c8a4395cfd30ff6376019aa743a25b280eaa050bb3a0446c321"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_Final_Fam_1.dat",
+            "size": 276,
+            "sha256": "0c2fc77cf67f41da327557fda9353ab0fd8238cab92edffd309f8b3ae4965534"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii/radii_Final_Fam_2.dat",
+            "size": 330,
+            "sha256": "3a90b09cee87c2e2d124f375f1853fd4c0b00adce42ebec1156958ebc4607b7f"
+          },
+          {
+            "path": "dfn/dfnGen_output/radii_Final.dat",
+            "size": 385,
+            "sha256": "69b318fbf6ccb4ce6d6de856ecdb3066d51aff8d4a376e638e7bd1f8590cbb40"
+          },
+          {
+            "path": "dfn/dfnGen_output/rejections.dat",
+            "size": 153,
+            "sha256": "6ff294367ca85543cdf9007d51c893f61cf7343557bffb381f9149a8a05df873"
+          },
+          {
+            "path": "dfn/dfnGen_output/rejectsPerAttempt.dat",
+            "size": 60,
+            "sha256": "467ffa25725abae29597e2f2c17aabd2296a948d5efc755cce4a6bef2c1551fc"
+          },
+          {
+            "path": "dfn/dfnGen_output/right.dat",
+            "size": 9,
+            "sha256": "f489149f432f3a79098ebee801ee156d0b2e076c02ae620344d1bd5976046c10"
+          },
+          {
+            "path": "dfn/dfnGen_output/surface_area_Final.dat",
+            "size": 153,
+            "sha256": "f9444c291d0b90e7de9c54015a9f3b2ec1df1204966ffeca065e8accfc598a36"
+          },
+          {
+            "path": "dfn/dfnGen_output/top.dat",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "dfn/dfnGen_output/translations.dat",
+            "size": 1234,
+            "sha256": "af1e889d1a1461ec552b68508dc7f2691a0799850dfbee6b041dd18db2bbb1e5"
+          },
+          {
+            "path": "dfn/dfnGen_output/userFractureRejections.dat",
+            "size": 31,
+            "sha256": "c7223fd990d932a5b67dcbee945629f2358e20497322ac72a9eecc1029ca8709"
+          },
+          {
+            "path": "dfn/dfnGen_output/work_dfnGen_input_clean.dat",
+            "size": 1698,
+            "sha256": "b41044a6a73772b7f2cb9911aaf86a13dc4ef6ff6e7c943d3bac48780a1aeb91"
+          },
+          {
+            "path": "dfn/normal_vectors.dat",
+            "size": 614,
+            "sha256": "5c56716e41315ef99e2e85db9babad2fd1d31c80dfdd58c14d26fdafb10ed877"
+          },
+          {
+            "path": "dfn/params.txt",
+            "size": 21,
+            "sha256": "de3f4e4981f80ebe7b172170ca7d01cf93ccddd30a90add8f3dd859e07524e77"
+          },
+          {
+            "path": "dfn/poly_info.dat",
+            "size": 1056,
+            "sha256": "6b929271882668daf3d32b20a802262ba6fac80038ebdacd0ed04324fc02210e"
+          },
+          {
+            "path": "dfn/reduced_mesh.inp",
+            "size": 13012,
+            "sha256": "3d01b8086af76da24a336ee67c2372480d819b6ede45867f7070cbf1aa213c3b"
+          },
+          {
+            "path": "dfn/translations.dat",
+            "size": 1234,
+            "sha256": "af1e889d1a1461ec552b68508dc7f2691a0799850dfbee6b041dd18db2bbb1e5"
+          },
+          {
+            "path": "octree/boundary_back_s.ex",
+            "size": 56618,
+            "sha256": "1710bbd92582ccd5d244ba8625e754b74cd63e5181eb472d766bd4519596e246"
+          },
+          {
+            "path": "octree/boundary_back_s.zone",
+            "size": 7483,
+            "sha256": "c069d6add1193e59f1b5441ac913665bedfd33f077e2dec7ad607ed4a68122d9"
+          },
+          {
+            "path": "octree/boundary_bottom.ex",
+            "size": 29161,
+            "sha256": "597de8f0fd80671877934aaaa8f153ed8ece8d2945effa3396ad0d18132733a6"
+          },
+          {
+            "path": "octree/boundary_bottom.zone",
+            "size": 3886,
+            "sha256": "77d1c564df798786bf5b0df2c080ee16b9fa623f1ea4a3199962a80e2ab8583f"
+          },
+          {
+            "path": "octree/boundary_conversion.json",
+            "size": 1526,
+            "sha256": "82f0344e1e5a43320b7f7872326c4e46b7b51592e0890020a3fb6ae335f927dd"
+          },
+          {
+            "path": "octree/boundary_front_n.ex",
+            "size": 21168,
+            "sha256": "bc659289a1016892f4fe0fd90e98187c0d1902a1c73af4a0e6090e8b7a68f1c2"
+          },
+          {
+            "path": "octree/boundary_front_n.zone",
+            "size": 2864,
+            "sha256": "799aff5fac9b1457aee2becc5189682d14e13e96da50f57138d1f6532d7d27d2"
+          },
+          {
+            "path": "octree/boundary_left_w.ex",
+            "size": 48791,
+            "sha256": "729921573e53c35d1d42aa4330ff1e9d76430ac349c64dc2f36771a6f61b89ca"
+          },
+          {
+            "path": "octree/boundary_left_w.zone",
+            "size": 6570,
+            "sha256": "0d9f935c538a3a89b81b85638fa50a567ba093240bab4a8f25483c17735f09db"
+          },
+          {
+            "path": "octree/boundary_right_e.ex",
+            "size": 50093,
+            "sha256": "9a3d990adf0caedfa24a842f532d7e241278f5b2ce9870fd4893016589dd5bed"
+          },
+          {
+            "path": "octree/boundary_right_e.zone",
+            "size": 6659,
+            "sha256": "9b25c395693299008f2c73225dfbbf39d5ec5ff6a8e14efbaa3b15bb40bf601e"
+          },
+          {
+            "path": "octree/boundary_top.ex",
+            "size": 21167,
+            "sha256": "2ce5aa9259c59e2a7bc52141ac7ef7eb79c2f7d33fdb711d6dec4a25becea1be"
+          },
+          {
+            "path": "octree/boundary_top.zone",
+            "size": 2860,
+            "sha256": "0b1370970b195267c252567406e6552827ec8d22a322a5543d47eec672b3db14"
+          },
+          {
+            "path": "octree/connections.p",
+            "size": 178415,
+            "sha256": "b8ef1a23a72a5e334ba0a33e1185100ae2ca1d3184f136b0bc07c979a1d19515"
+          },
+          {
+            "path": "octree/full_mesh.uge",
+            "size": 15732767,
+            "sha256": "4e08495160286594b6b6ce49ade38ef7e736d37eb4b090346257655bf7da21d0"
+          },
+          {
+            "path": "octree/octree_dfn.inp",
+            "size": 11158351,
+            "sha256": "d5315a8b0ea9812ba315b5aab10006d5a4e5de7ae5cb84a3b26fd3013e0c5d00"
+          },
+          {
+            "path": "octree/octree_dfn_material.zone",
+            "size": 354410,
+            "sha256": "6b8344a908da683d127c762699bb83f6be71d5332f7b257ffb2a706d0bdd2e73"
+          },
+          {
+            "path": "octree/octree_dfn_outside.zone",
+            "size": 30298,
+            "sha256": "64ebd390294e6394df93e57b1839664f1164a9c293f7d116d5473ae463289359"
+          }
+        ],
+        "invalidation_tokens": {},
+        "fingerprint": "6ffc66faaafbcfb23887c8612673ede6f02754edc63dbb82e92831aee21d6e75"
+      },
+      "products": [
+        {
+          "path": "octree/materials.h5",
+          "size": 165555,
+          "sha256": "051ecf344ed3c075d81d45765be0e2d201231430554d590dab33d0117dc7d1bb"
+        },
+        {
+          "path": "octree/mesh_permeability.h5",
+          "size": 388628,
+          "sha256": "981f06eae64d8cce3fbd8983f6b9d19846949ffe3524214214c7ff1d0f9b4dd7"
+        },
+        {
+          "path": "octree/mesh_porosity.h5",
+          "size": 388628,
+          "sha256": "27a7a5207ce971f70106868051a7e48d93aef2af8df12327e535b64adf2e553f"
+        }
+      ],
+      "product_fingerprint": "813bd85a164a9c1d34ceaee3708a3351d95237c2ea50a0d82794d6624a1ee908"
+    },
+    "pflotran/model_manifest.json": {
+      "schema_version": "2.0",
+      "status": "ready",
+      "generated_at": "2026-11-25T16:44:14.791606+00:00",
+      "config": "pflotran/model_config.json",
+      "input": "pflotran/model.in",
+      "working_directory": "pflotran",
+      "input_sha256": "36c2eaf236defb336ea22eb4e606f753ebf34d679b104a409bbded6812e35dfd",
+      "config_sha256": "74ec7353c0e5e5f64f56b3ca8dd0e8380e4e1c2b4f7df5223e75f4c3adbbbe50",
+      "resource_manifest": [
+        {
+          "path": "database/hanford.dat",
+          "size": 480377,
+          "sha256": "c9ea70ef7fdf236e1bbf447a9269e54aae8a19875ad1878ffed94f542a8ab77a"
+        },
+        {
+          "path": "octree/boundary_back_s.ex",
+          "size": 56618,
+          "sha256": "1710bbd92582ccd5d244ba8625e754b74cd63e5181eb472d766bd4519596e246"
+        },
+        {
+          "path": "octree/boundary_bottom.ex",
+          "size": 29161,
+          "sha256": "597de8f0fd80671877934aaaa8f153ed8ece8d2945effa3396ad0d18132733a6"
+        },
+        {
+          "path": "octree/boundary_front_n.ex",
+          "size": 21168,
+          "sha256": "bc659289a1016892f4fe0fd90e98187c0d1902a1c73af4a0e6090e8b7a68f1c2"
+        },
+        {
+          "path": "octree/boundary_left_w.ex",
+          "size": 48791,
+          "sha256": "729921573e53c35d1d42aa4330ff1e9d76430ac349c64dc2f36771a6f61b89ca"
+        },
+        {
+          "path": "octree/boundary_right_e.ex",
+          "size": 50093,
+          "sha256": "9a3d990adf0caedfa24a842f532d7e241278f5b2ce9870fd4893016589dd5bed"
+        },
+        {
+          "path": "octree/boundary_top.ex",
+          "size": 21167,
+          "sha256": "2ce5aa9259c59e2a7bc52141ac7ef7eb79c2f7d33fdb711d6dec4a25becea1be"
+        },
+        {
+          "path": "octree/full_mesh.uge",
+          "size": 15732767,
+          "sha256": "4e08495160286594b6b6ce49ade38ef7e736d37eb4b090346257655bf7da21d0"
+        },
+        {
+          "path": "octree/materials.h5",
+          "size": 165555,
+          "sha256": "051ecf344ed3c075d81d45765be0e2d201231430554d590dab33d0117dc7d1bb"
+        },
+        {
+          "path": "octree/mesh_permeability.h5",
+          "size": 388628,
+          "sha256": "981f06eae64d8cce3fbd8983f6b9d19846949ffe3524214214c7ff1d0f9b4dd7"
+        },
+        {
+          "path": "octree/mesh_porosity.h5",
+          "size": 388628,
+          "sha256": "27a7a5207ce971f70106868051a7e48d93aef2af8df12327e535b64adf2e553f"
+        }
+      ],
+      "generation_fingerprint": "f4080d7f006d4295bf2223f412a08268b2403f07bc98b95804d5ce8fb5449d50",
+      "simulation_mesh": {
+        "provider": "dfn_udfm",
+        "grid": "octree/full_mesh.uge",
+        "visualization_geometry": "octree/octree_dfn.inp",
+        "materials": "octree/materials.h5",
+        "permeability": "octree/mesh_permeability.h5",
+        "porosity": "octree/mesh_porosity.h5",
+        "boundaries": {
+          "south": "octree/boundary_back_s.ex",
+          "bottom": "octree/boundary_bottom.ex",
+          "north": "octree/boundary_front_n.ex",
+          "west": "octree/boundary_left_w.ex",
+          "east": "octree/boundary_right_e.ex",
+          "top": "octree/boundary_top.ex"
+        }
+      }
+    },
+    "records/generation/pflotran_input.json": {
+      "schema_version": "1.0",
+      "stage": "pflotran_input",
+      "generated_at": "2026-11-25T16:44:14.853819+00:00",
+      "generation_id": "27c0c3562dab4f4eb3298d8673dce0ff",
+      "run_id": null,
+      "launch_identity": {
+        "stage": "pflotran_input",
+        "configuration": {
+          "schema_version": "2.0",
+          "simulation": {
+            "task_type": "reactive_transport",
+            "flow_state": "transient",
+            "saturation_state": "saturated",
+            "flow_mode": "RICHARDS",
+            "transport_mode": "GIRT"
+          },
+          "time": {
+            "final_time": 20,
+            "final_unit": "y",
+            "initial_timestep": 1,
+            "initial_timestep_unit": "h",
+            "maximum_timestep": 1,
+            "maximum_timestep_unit": "month"
+          },
+          "numerical_methods": {
+            "mode": "custom",
+            "flow": {
+              "newton": {
+                "maximum_iterations": null,
+                "snes_type": null,
+                "rtol": null,
+                "atol": null,
+                "itol": 1e-08,
+                "stol": null,
+                "dtol": null
+              },
+              "linear": {
+                "solver_type": "ITERATIVE",
+                "preconditioner": null,
+                "rtol": null,
+                "atol": null,
+                "dtol": null
+              }
+            },
+            "transport": {
+              "newton": {
+                "maximum_iterations": null,
+                "snes_type": null,
+                "rtol": null,
+                "atol": null,
+                "itol": 1e-08,
+                "stol": null,
+                "dtol": null
+              },
+              "linear": {
+                "solver_type": "ITERATIVE",
+                "preconditioner": null,
+                "rtol": null,
+                "atol": null,
+                "dtol": null
+              }
+            }
+          },
+          "grid": {
+            "grid_type": "unstructured_explicit",
+            "file": "octree/full_mesh.uge",
+            "gravity": {
+              "mode": "off",
+              "vector": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "fluid_properties": {
+            "diffusion_coefficient": 1e-09
+          },
+          "datasets": [
+            {
+              "id": "udfm_permeability",
+              "file": "octree/mesh_permeability.h5",
+              "hdf5_dataset_name": "Permeability"
+            },
+            {
+              "id": "udfm_porosity",
+              "file": "octree/mesh_porosity.h5",
+              "hdf5_dataset_name": "Porosity"
+            }
+          ],
+          "chemistry": {
+            "database": {
+              "relative_path": "database/hanford.dat"
+            },
+            "aqueous_species": {
+              "primary_species": [
+                "H+",
+                "HCO3-",
+                "Ca++",
+                "Tracer",
+                "Tracer1",
+                "Tracer2"
+              ],
+              "secondary_species": [
+                "OH-",
+                "CO3--",
+                "CO2(aq)",
+                "CaCO3(aq)",
+                "CaHCO3+",
+                "CaOH+"
+              ]
+            },
+            "gas_species": {
+              "passive_gases": [
+                "CO2(g)"
+              ]
+            },
+            "selected_minerals": [
+              "Calcite"
+            ],
+            "mineral_kinetics": [
+              {
+                "mineral_name": "Calcite",
+                "rate_constant": 1e-06,
+                "rate_unit": "mol/m^2-sec",
+                "surface_area_function": "default",
+                "specific_surface_area": null,
+                "surface_area_unit": "m2/kg",
+                "prefactor_species": null,
+                "alpha": null
+              }
+            ],
+            "log_formulation": true,
+            "activity_coefficients": "timestep",
+            "update_porosity": false,
+            "update_permeability": false
+          },
+          "materials": [
+            {
+              "id": "matrix",
+              "material_id": 1,
+              "porosity": {
+                "mode": "constant",
+                "value": 0.01
+              },
+              "permeability": {
+                "mode": "isotropic",
+                "isotropic": 1e-18
+              },
+              "tortuosity": 0.01,
+              "longitudinal_dispersivity": 0.0025,
+              "transverse_dispersivity_horizontal": 0.00025,
+              "transverse_dispersivity_vertical": 2.5e-05,
+              "characteristic_curve_id": "default"
+            },
+            {
+              "id": "fracture",
+              "material_id": 2,
+              "porosity": {
+                "mode": "dataset",
+                "dataset_id": "udfm_porosity"
+              },
+              "permeability": {
+                "mode": "dataset",
+                "anisotropic_dataset": false,
+                "dataset_id": "udfm_permeability"
+              },
+              "tortuosity": 0.25,
+              "longitudinal_dispersivity": 0.0025,
+              "transverse_dispersivity_horizontal": 0.00025,
+              "transverse_dispersivity_vertical": 2.5e-05,
+              "characteristic_curve_id": "default"
+            }
+          ],
+          "characteristic_curves": [
+            {
+              "id": "default",
+              "model": "van_genuchten",
+              "alpha": 0.0001,
+              "m_or_lambda": 0.5,
+              "liquid_residual_saturation": 0.1,
+              "maximum_capillary_pressure": 100000000,
+              "permeability_function": "MUALEM",
+              "smooth": false
+            }
+          ],
+          "regions": [
+            {
+              "name": "all",
+              "region_type": "COORDINATES",
+              "bounds": [
+                -7.5,
+                -7.5,
+                -7.5,
+                7.5,
+                7.5,
+                7.5
+              ],
+              "coordinate_unit": "m"
+            },
+            {
+              "name": "top",
+              "region_type": "FILE",
+              "file_path": "octree/boundary_top.ex"
+            },
+            {
+              "name": "bottom",
+              "region_type": "FILE",
+              "file_path": "octree/boundary_bottom.ex"
+            },
+            {
+              "name": "west",
+              "region_type": "FILE",
+              "file_path": "octree/boundary_left_w.ex"
+            },
+            {
+              "name": "east",
+              "region_type": "FILE",
+              "file_path": "octree/boundary_right_e.ex"
+            },
+            {
+              "name": "north",
+              "region_type": "FILE",
+              "file_path": "octree/boundary_front_n.ex"
+            },
+            {
+              "name": "south",
+              "region_type": "FILE",
+              "file_path": "octree/boundary_back_s.ex"
+            }
+          ],
+          "flow_conditions": [
+            {
+              "name": "initial",
+              "usage": "initial",
+              "form": "fixed_liquid_pressure",
+              "parameters": {
+                "value": 1013250.0,
+                "unit": "Pa"
+              }
+            },
+            {
+              "name": "outflow",
+              "usage": "boundary",
+              "form": "fixed_liquid_pressure",
+              "parameters": {
+                "value": 1000000.0,
+                "unit": "Pa"
+              }
+            },
+            {
+              "name": "inflow",
+              "usage": "boundary",
+              "form": "fixed_liquid_pressure",
+              "parameters": {
+                "value": 1050000.0,
+                "unit": "Pa"
+              }
+            }
+          ],
+          "chemical_constraints": [
+            {
+              "id": "initial_constraint",
+              "concentrations": [
+                {
+                  "species": "H+",
+                  "value": 1e-08,
+                  "constraint_type": "F",
+                  "associated_species": null
+                },
+                {
+                  "species": "HCO3-",
+                  "value": 0.001,
+                  "constraint_type": "G",
+                  "associated_species": "CO2(g)"
+                },
+                {
+                  "species": "Ca++",
+                  "value": 0.00052,
+                  "constraint_type": "M",
+                  "associated_species": "Calcite"
+                },
+                {
+                  "species": "Tracer",
+                  "value": 1e-08,
+                  "constraint_type": "F",
+                  "associated_species": null
+                },
+                {
+                  "species": "Tracer1",
+                  "value": 0.00173,
+                  "constraint_type": "F",
+                  "associated_species": null
+                },
+                {
+                  "species": "Tracer2",
+                  "value": 0.00052,
+                  "constraint_type": "F",
+                  "associated_species": null
+                }
+              ],
+              "minerals": [
+                {
+                  "mineral_id": "Calcite",
+                  "volume_fraction": 1e-05,
+                  "surface_area": 1,
+                  "surface_area_unit": "m^2/m^3"
+                }
+              ]
+            },
+            {
+              "id": "inlet_constraint",
+              "concentrations": [
+                {
+                  "species": "H+",
+                  "value": 4,
+                  "constraint_type": "P",
+                  "associated_species": null
+                },
+                {
+                  "species": "HCO3-",
+                  "value": 0.001,
+                  "constraint_type": "T",
+                  "associated_species": null
+                },
+                {
+                  "species": "Ca++",
+                  "value": 1e-06,
+                  "constraint_type": "T",
+                  "associated_species": null
+                },
+                {
+                  "species": "Tracer",
+                  "value": 0.0001,
+                  "constraint_type": "F",
+                  "associated_species": null
+                },
+                {
+                  "species": "Tracer1",
+                  "value": 0.001,
+                  "constraint_type": "F",
+                  "associated_species": null
+                },
+                {
+                  "species": "Tracer2",
+                  "value": 1e-06,
+                  "constraint_type": "F",
+                  "associated_species": null
+                }
+              ],
+              "minerals": []
+            }
+          ],
+          "transport_conditions": [
+            {
+              "name": "background_conc",
+              "usage": "initial",
+              "form": "initial_solution",
+              "solution_components": [],
+              "reference_solution": "",
+              "constraint_id": "initial_constraint"
+            },
+            {
+              "name": "outflow_conc",
+              "usage": "boundary",
+              "form": "zero_gradient_outflow",
+              "solution_components": [],
+              "reference_solution": "",
+              "constraint_id": "initial_constraint"
+            },
+            {
+              "name": "inlet_conc",
+              "usage": "boundary",
+              "form": "inflow_solution",
+              "solution_components": [],
+              "reference_solution": "",
+              "constraint_id": "inlet_constraint"
+            }
+          ],
+          "spatial_assignment": {
+            "condition_assignments": [
+              {
+                "name": "initial",
+                "usage": "initial",
+                "region_name": "all",
+                "flow_condition_name": "initial",
+                "transport_condition_name": "background_conc"
+              },
+              {
+                "name": "outlet",
+                "usage": "boundary",
+                "region_name": "east",
+                "flow_condition_name": "outflow",
+                "transport_condition_name": "outflow_conc"
+              },
+              {
+                "name": "inlet",
+                "usage": "boundary",
+                "region_name": "west",
+                "flow_condition_name": "inflow",
+                "transport_condition_name": "inlet_conc"
+              }
+            ],
+            "material_mapping": {
+              "mode": "material_file",
+              "file_path": "octree/materials.h5"
+            }
+          },
+          "output": {
+            "snapshot_format": "HDF5",
+            "schedule": {
+              "mode": "periodic_time",
+              "interval_value": 6,
+              "interval_unit": "month"
+            },
+            "print_initial": true,
+            "print_final": true,
+            "velocity_at_center": true,
+            "flow_variables": {
+              "liquid_pressure": true,
+              "liquid_head": false,
+              "liquid_saturation": false,
+              "porosity": true,
+              "permeability": true,
+              "permeability_x": false,
+              "permeability_y": false,
+              "permeability_z": false
+            },
+            "chemistry_variables": {
+              "ph": true,
+              "all_primary_species": true,
+              "all_species": true,
+              "secondary_species": false,
+              "mineral_volume_fraction": false,
+              "mineral_rate": true,
+              "mineral_saturation_index": true
+            },
+            "mass_flowrate": false,
+            "mass_balance": false,
+            "mass_balance_file": {
+              "enabled": true,
+              "schedule": {
+                "mode": "periodic_timestep",
+                "timestep_interval": 1
+              },
+              "regions": [
+                "east"
+              ],
+              "print_initial": true,
+              "print_final": true
+            },
+            "observation": {
+              "enabled": false
+            }
+          },
+          "continuum": {
+            "schema_version": "0.1",
+            "base_cell_size": 1.0,
+            "refinement_levels": 2,
+            "output_directory_name": "octree",
+            "matrix_permeability": 1e-18,
+            "matrix_porosity": 0.01,
+            "boundary_area_mode": "tool_default",
+            "boundary_cell_area": null
+          }
+        },
+        "resources": [
+          {
+            "path": "database/hanford.dat",
+            "size": 480377,
+            "sha256": "c9ea70ef7fdf236e1bbf447a9269e54aae8a19875ad1878ffed94f542a8ab77a"
+          },
+          {
+            "path": "octree/boundary_back_s.ex",
+            "size": 56618,
+            "sha256": "1710bbd92582ccd5d244ba8625e754b74cd63e5181eb472d766bd4519596e246"
+          },
+          {
+            "path": "octree/boundary_bottom.ex",
+            "size": 29161,
+            "sha256": "597de8f0fd80671877934aaaa8f153ed8ece8d2945effa3396ad0d18132733a6"
+          },
+          {
+            "path": "octree/boundary_front_n.ex",
+            "size": 21168,
+            "sha256": "bc659289a1016892f4fe0fd90e98187c0d1902a1c73af4a0e6090e8b7a68f1c2"
+          },
+          {
+            "path": "octree/boundary_left_w.ex",
+            "size": 48791,
+            "sha256": "729921573e53c35d1d42aa4330ff1e9d76430ac349c64dc2f36771a6f61b89ca"
+          },
+          {
+            "path": "octree/boundary_right_e.ex",
+            "size": 50093,
+            "sha256": "9a3d990adf0caedfa24a842f532d7e241278f5b2ce9870fd4893016589dd5bed"
+          },
+          {
+            "path": "octree/boundary_top.ex",
+            "size": 21167,
+            "sha256": "2ce5aa9259c59e2a7bc52141ac7ef7eb79c2f7d33fdb711d6dec4a25becea1be"
+          },
+          {
+            "path": "octree/full_mesh.uge",
+            "size": 15732767,
+            "sha256": "4e08495160286594b6b6ce49ade38ef7e736d37eb4b090346257655bf7da21d0"
+          },
+          {
+            "path": "octree/materials.h5",
+            "size": 165555,
+            "sha256": "051ecf344ed3c075d81d45765be0e2d201231430554d590dab33d0117dc7d1bb"
+          },
+          {
+            "path": "octree/mesh_permeability.h5",
+            "size": 388628,
+            "sha256": "981f06eae64d8cce3fbd8983f6b9d19846949ffe3524214214c7ff1d0f9b4dd7"
+          },
+          {
+            "path": "octree/mesh_porosity.h5",
+            "size": 388628,
+            "sha256": "27a7a5207ce971f70106868051a7e48d93aef2af8df12327e535b64adf2e553f"
+          },
+          {
+            "path": "dfn/dfn_config.json",
+            "size": 2610,
+            "sha256": "ee66b682cfc5ace2890c964106a8dd6e5d82645047bee80a591acb5bee3261ea"
+          }
+        ],
+        "invalidation_tokens": {},
+        "fingerprint": "f4080d7f006d4295bf2223f412a08268b2403f07bc98b95804d5ce8fb5449d50"
+      },
+      "products": [
+        {
+          "path": "pflotran/model.in",
+          "size": 4542,
+          "sha256": "36c2eaf236defb336ea22eb4e606f753ebf34d679b104a409bbded6812e35dfd"
+        }
+      ],
+      "product_fingerprint": "6223d08922543066429e235bad741e46ed5ffab09a42f9473f139788708f0f06"
+    },
+    "pflotran/simulation_run.json": {
+      "schema_version": "2.0",
+      "run_id": "pflotran-641b2b6d5e7b41c885921f2c429990f3"
+    }
+  },
+  "identity_history": [
+    {
+      "previous_id": "d6a8a884-bd2f-491f-a74d-01cc8aa8cfff",
+      "previous_location": "d:/fracrtm-gui/audits/json_only_rerun_20261126/projects/b1",
+      "changed_at": "2026-11-25T16:51:44.826257+00:00"
+    }
+  ]
+}

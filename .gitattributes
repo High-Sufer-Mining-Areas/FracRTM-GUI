@@ -1,2 +1,6 @@
-# Auto detect text files and perform LF normalization
+# Normalize text files except for byte-verified example project data.
 * text=auto
+example/** -text
+
+# Keep the full B1 result in Git LFS.
+example/B1/results/run-001/output/model.h5 filter=lfs diff=lfs merge=lfs -text

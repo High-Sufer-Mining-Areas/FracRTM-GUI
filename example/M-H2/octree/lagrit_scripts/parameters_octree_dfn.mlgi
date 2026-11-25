@@ -1,0 +1,36 @@
+# 
+# Define some parameters
+#
+# Input DFN mesh
+#
+define / FTYPE / avs
+define / FNAME / reduced_mesh.inp
+#
+define / MOHEX / mohex
+define / MOTET / motet
+# 
+# Set AMR refinement. 123 means refine in x,y,z directions
+# See LaGriT refine command for more options
+#
+define / REFINE_AMR / 123
+#
+    define / N_OCTREE_REFINE /    3 
+define / N_OCTREE_REFINE_M1 / 2 
+define / N_OCTREE_np1 / 4 
+define / N_OCTREE_np1_M1 / 3 
+define / X0 /  -0.500000000000 
+define / X1 /  0.500000000000 
+define / Y0 / -0.500000000000 
+define / Y1 /  0.500000000000 
+define / Z0 /  -0.500000000000 
+define / Z1 /  0.500000000000 
+define / XMAX / 0.499900000000 
+define / XMIN / -0.499900000000 
+define / YMAX / 0.499900000000 
+define / YMIN / -0.499900000000 
+define / ZMAX / 0.499900000000 
+define / ZMIN / -0.499900000000 
+define / NX / 4 
+define / NY / 4 
+define / NZ / 4 
+finish

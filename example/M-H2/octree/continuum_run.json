@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "stage": "completed",
+  "job_directory": "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/upscale-70bd396b95964f3ebcaded5d7c4e3480/dfn",
+  "output_directory": "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/upscale-70bd396b95964f3ebcaded5d7c4e3480/dfn/octree",
+  "message": "Continuum mapping completed successfully.",
+  "started_at": "2026-11-25T16:41:01.430301+00:00",
+  "finished_at": "2026-11-25T16:41:02.384915+00:00",
+  "message_data": {
+    "key": "text.continuum.mapping.completed.successfully",
+    "values": {}
+  }
+}

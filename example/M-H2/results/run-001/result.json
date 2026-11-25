@@ -1,0 +1,618 @@
+{
+  "schema_version": "1.0",
+  "run_id": "pflotran-1023b829ee954e018431e8b3145446d2",
+  "project_id": "eacbb45b-1351-472e-8ef2-a4730800b130",
+  "stage": "pflotran",
+  "status": "completed",
+  "created_at": "2026-11-25T16:41:10.143554+00:00",
+  "started_at": "2026-11-25T16:41:23.593605+00:00",
+  "finished_at": "2026-11-25T16:41:25.136117+00:00",
+  "command": [
+    "wsl.exe",
+    "-d",
+    "Ubuntu-22.04",
+    "-u",
+    "root",
+    "--cd",
+    "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/pflotran",
+    "--",
+    "/root/venvs/dfnworks-2.8/bin/python",
+    "-B",
+    "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/runtime/task_runner.py",
+    "--control",
+    "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/task_control.json",
+    "--token",
+    "pflotran-1023b829ee954e018431e8b3145446d2",
+    "--",
+    "mpirun",
+    "--allow-run-as-root",
+    "-np",
+    "1",
+    "/root/pflotran/src/pflotran/pflotran",
+    "-input_prefix",
+    "model"
+  ],
+  "runtime": {
+    "distribution": "Ubuntu-22.04",
+    "wsl_user": "root",
+    "dfn_python": "/root/venvs/dfnworks-2.8/bin/python",
+    "dfnworks_home": "/root/.fracrtm-dfnworks-2.8",
+    "pflotran_executable": "/root/pflotran/src/pflotran/pflotran",
+    "mpi_launcher": "mpirun",
+    "wsl_workspace_root": "/root/FracRTMWorkspace"
+  },
+  "ncpu": 1,
+  "launch_identity": {
+    "stage": "pflotran_input",
+    "resources": [
+      {
+        "path": "octree/boundary_back_s.ex",
+        "size": 28625,
+        "sha256": "a255812a51661ca156991c2a497f9496b3f9e0282d3ac3da22b9a036437c0b46"
+      },
+      {
+        "path": "octree/boundary_bottom.ex",
+        "size": 14836,
+        "sha256": "fcd3dddcc44afaf2dc64c2e96034fdc124c422e606d00d66552aa04baa707b2e"
+      },
+      {
+        "path": "octree/boundary_front_n.ex",
+        "size": 28314,
+        "sha256": "d4836a163794fdf62384e4451eb080a3d92c5f50d2872065245aa195e52e0474"
+      },
+      {
+        "path": "octree/boundary_left_w.ex",
+        "size": 14568,
+        "sha256": "ddf45313a58c0c8b407085280ebc00b0319fc0d320f79c758be43a597231a582"
+      },
+      {
+        "path": "octree/boundary_right_e.ex",
+        "size": 18781,
+        "sha256": "ea2db18413be5ee7dc15a087d845c9ec2bd36a814402735acabad353622e48a6"
+      },
+      {
+        "path": "octree/boundary_top.ex",
+        "size": 14658,
+        "sha256": "ac8a1754d9810f2d845c73f62c05aefd249483415f39be39013557edb52b21a9"
+      },
+      {
+        "path": "octree/full_mesh.uge",
+        "size": 3613698,
+        "sha256": "54b2454a541ca1e6a9df23cbecb69626bfaaee3e203f554e376201f5998f036b"
+      },
+      {
+        "path": "octree/materials.h5",
+        "size": 44370,
+        "sha256": "3f77e1ea3013fd576f5e478f3bca60e8a1654ae12c1fafa77c2a798e1bc06792"
+      },
+      {
+        "path": "octree/mesh_permeability.h5",
+        "size": 97784,
+        "sha256": "f7bec16352d9b6a55bbb281f18774cd5156fb1fd7e752bfb4349345a6ac32b05"
+      },
+      {
+        "path": "octree/mesh_porosity.h5",
+        "size": 97784,
+        "sha256": "7ea32460865e94410ca51c73d67fc2b1421d12aac9017fec766aa81d17764cee"
+      },
+      {
+        "path": "dfn/dfn_config.json",
+        "size": 2131,
+        "sha256": "29f236ecbdc0e016bd35b98a678729782e7843ec8d83418382f8c6ba75f89d32"
+      }
+    ],
+    "invalidation_tokens": {},
+    "fingerprint": "1debe4e10558a9c8c3330ce63e8dbe2808283c09956f502f877cd2cbc65b19d3"
+  },
+  "input_files": [
+    {
+      "path": "dfn/dfnGen_output/polygons.dat",
+      "size": 351,
+      "sha256": "49e6695b14277fdeae52dce19702df76b7cc04e3a8185716744bd663dca69ccc"
+    },
+    {
+      "path": "dfn/dfn_config.json",
+      "size": 2131,
+      "sha256": "29f236ecbdc0e016bd35b98a678729782e7843ec8d83418382f8c6ba75f89d32"
+    },
+    {
+      "path": "octree/boundary_back_s.ex",
+      "size": 28625,
+      "sha256": "a255812a51661ca156991c2a497f9496b3f9e0282d3ac3da22b9a036437c0b46"
+    },
+    {
+      "path": "octree/boundary_bottom.ex",
+      "size": 14836,
+      "sha256": "fcd3dddcc44afaf2dc64c2e96034fdc124c422e606d00d66552aa04baa707b2e"
+    },
+    {
+      "path": "octree/boundary_front_n.ex",
+      "size": 28314,
+      "sha256": "d4836a163794fdf62384e4451eb080a3d92c5f50d2872065245aa195e52e0474"
+    },
+    {
+      "path": "octree/boundary_left_w.ex",
+      "size": 14568,
+      "sha256": "ddf45313a58c0c8b407085280ebc00b0319fc0d320f79c758be43a597231a582"
+    },
+    {
+      "path": "octree/boundary_right_e.ex",
+      "size": 18781,
+      "sha256": "ea2db18413be5ee7dc15a087d845c9ec2bd36a814402735acabad353622e48a6"
+    },
+    {
+      "path": "octree/boundary_top.ex",
+      "size": 14658,
+      "sha256": "ac8a1754d9810f2d845c73f62c05aefd249483415f39be39013557edb52b21a9"
+    },
+    {
+      "path": "octree/continuum_config.json",
+      "size": 246,
+      "sha256": "d2368cbf87c81a0137a7301725cbfa1b7ec33fe802a746176f33af858fad4712"
+    },
+    {
+      "path": "octree/full_mesh.uge",
+      "size": 3613698,
+      "sha256": "54b2454a541ca1e6a9df23cbecb69626bfaaee3e203f554e376201f5998f036b"
+    },
+    {
+      "path": "octree/materials.h5",
+      "size": 44370,
+      "sha256": "3f77e1ea3013fd576f5e478f3bca60e8a1654ae12c1fafa77c2a798e1bc06792"
+    },
+    {
+      "path": "octree/mesh_permeability.h5",
+      "size": 97784,
+      "sha256": "f7bec16352d9b6a55bbb281f18774cd5156fb1fd7e752bfb4349345a6ac32b05"
+    },
+    {
+      "path": "octree/mesh_porosity.h5",
+      "size": 97784,
+      "sha256": "7ea32460865e94410ca51c73d67fc2b1421d12aac9017fec766aa81d17764cee"
+    },
+    {
+      "path": "octree/octree_dfn.inp",
+      "size": 2412571,
+      "sha256": "f0435a2861a3ff1393d519d0479f1d3569a33785cc3c13ffecd0e1623198c313"
+    },
+    {
+      "path": "pflotran/model.in",
+      "size": 2580,
+      "sha256": "3c7ff0a7c3e241ff1e09fc95f46f5789a93d8f41e16dc40e2b514b264cbfed12"
+    },
+    {
+      "path": "pflotran/model_config.json",
+      "size": 10705,
+      "sha256": "fa543e495c58b3b131fc81ce37553d49582217b9aa7c2aae9f018ae30892fb85"
+    },
+    {
+      "path": "pflotran/model_manifest.json",
+      "size": 2747,
+      "sha256": "0e7963c82d9f3ab6ca6971df0fa2d9e9a5d800d68922e1d883fead3ffbe5f3fb"
+    }
+  ],
+  "output": "output",
+  "stdout": "output/stdout.log",
+  "stderr": "output/stderr.log",
+  "returncode": 0,
+  "synchronized": true,
+  "solver_status": "succeeded",
+  "visualization_status": "succeeded",
+  "failure_stage": "",
+  "error": "",
+  "execution_source": {
+    "sha256": "e31af765b818625bbd5998926547603d9f2ab084b7256b8b0dcc2a51f550fc2f",
+    "retention": "identity_only"
+  },
+  "execution_environment": {
+    "python": "/root/venvs/dfnworks-2.8/bin/python",
+    "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "home": "/root",
+    "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib",
+    "tools": {
+      "PFLOTRAN": {
+        "requested": "/root/pflotran/src/pflotran/pflotran",
+        "resolved": "/root/pflotran/src/pflotran/pflotran",
+        "sha256": "b7874ba9c80090a8fe92f6b0c2f62fb857723c2c4235a3e1fd66421f81de401a",
+        "size": 6661304
+      },
+      "MPI": {
+        "requested": "mpirun",
+        "resolved": "/usr/bin/mpirun",
+        "sha256": "aad9e80dbde91273d09490a5b6de513b02ef3d4bc8d709fedf3e822ee9e7bda8",
+        "size": 14648
+      },
+      "DFNGEN_EXE": {
+        "requested": null,
+        "resolved": null
+      },
+      "LAGRIT_EXE": {
+        "requested": null,
+        "resolved": null
+      },
+      "PFLOTRAN_EXE": {
+        "requested": null,
+        "resolved": null
+      }
+    },
+    "packages": {
+      "pydfnworks": "2.8",
+      "numpy": "1.26.4",
+      "scipy": "1.15.3",
+      "h5py": "3.16.0"
+    },
+    "installed_packages": [
+      [
+        "DateTime",
+        "6.0"
+      ],
+      [
+        "PyVTK",
+        "0.5.18"
+      ],
+      [
+        "contourpy",
+        "1.3.2"
+      ],
+      [
+        "cycler",
+        "0.12.1"
+      ],
+      [
+        "fonttools",
+        "4.63.0"
+      ],
+      [
+        "fpdf",
+        "1.7.2"
+      ],
+      [
+        "h5py",
+        "3.16.0"
+      ],
+      [
+        "kiwisolver",
+        "1.5.0"
+      ],
+      [
+        "matplotlib",
+        "3.10.9"
+      ],
+      [
+        "mplstereonet",
+        "0.6.3"
+      ],
+      [
+        "mpmath",
+        "1.4.1"
+      ],
+      [
+        "networkx",
+        "3.4.2"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "packaging",
+        "26.2"
+      ],
+      [
+        "pandas",
+        "2.3.3"
+      ],
+      [
+        "pillow",
+        "12.3.0"
+      ],
+      [
+        "pip",
+        "26.2"
+      ],
+      [
+        "pydfnworks",
+        "2.8"
+      ],
+      [
+        "pyparsing",
+        "3.3.2"
+      ],
+      [
+        "python-dateutil",
+        "2.9.0.post0"
+      ],
+      [
+        "pytz",
+        "2026.3.post1"
+      ],
+      [
+        "scipy",
+        "1.15.3"
+      ],
+      [
+        "seaborn",
+        "0.12.2"
+      ],
+      [
+        "setuptools",
+        "83.0.0"
+      ],
+      [
+        "six",
+        "1.17.0"
+      ],
+      [
+        "tzdata",
+        "2026.3"
+      ],
+      [
+        "wheel",
+        "0.47.0"
+      ],
+      [
+        "zope.interface",
+        "8.5"
+      ]
+    ],
+    "pydfnworks_module": "/root/dfnWorks-2.8/pydfnworks/pydfnworks/__init__.py",
+    "pydfnworks_sources": {
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/__init__.py": "0a333cb7f155c64276ba3ce3f5a6ff972bd293ae484345939ff49721a4081d42",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnFlow/__init__.py": "4340bd5357910b8cf8593d49a1fd573b1ae820016439fc44b1f3f283d1d5c893",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnFlow/fehm.py": "c9c9f3a5f2305ca77590b3af359312ba6d63187c509ce8f23579139ff488eee7",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnFlow/flow.py": "f1bf485ed96e0c9a3da24528b38b4625b4d9a849d8998765bd43cd29bad3b2fe",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnFlow/mass_balance.py": "365d154c525549a5d7efe003c1a8d8f5b5d700604bb864e0fa07e64b3914198d",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnFlow/pflotran.py": "a0754b23b3964981e5086ffe93b042d854720497712c99943e634141fea5e400",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/__init__.py": "69ae0dd0eb152c600f64235256a5ead18a61a6c6697b2561cf0c7c7ad627767b",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/__init__.py": "2846d287c86c0a3d755b7af25d85d77ba45cf41d3e0a161e1a569e9b32c73b77",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/generator.py": "85d846ad723105ab727ae47f20f7f8f0ebd15e3b8e289bb68cbd4a30f3a90615",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/hydraulic_properties.py": "acc172b886315126b4aa73444eb261810e92fa2b299b285cb0937188a47900b4",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/__init__.py": "97a62969662177e5a2f12c48dd7b7d61de5d4e2062bcc3770fd1ecb9d59e43a0",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/add_fracture_family_to_params.py": "0b6d8bf2e070d6850169715ce95963447bede800c6dc0bc0ed8cea04f982393b",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/check_input.py": "4949b239714a7d2ed09ec2ea96667ad6229e19de76c6ffd87d18aae7c27f7905",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/fracture_family.py": "83765d62765fb10aa524cc8a886fd7c7bb4b4f3568ccd17353ddb06224fe808b",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/helper_functions.py": "b20de187a3736f8d0ac32758addde149554ed116b6a75c97483fa3af35bb551f",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/parameter_checking_distributions.py": "e541122e4d9d91d60aebf9b6cbc635a6f11d0f7e9f2191a9e0839bac2dcb5d09",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/parameter_checking_fractures.py": "2da14337b970ccaaa21f38ff42fd54da47be8e9c3a5396ca4c7741dbd821e071",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/parameter_checking_general.py": "d59c39e8baad0658683bf0ff5322872be96eec94f8410c177bdb6d3b5218989c",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/parameter_checking_h.py": "ed754ea163f28fcead43d1fb6f90c58c9dea8769b28bba01e167bf33634f48e3",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/parameter_dictionaries.py": "f4a1e3c17bb294da7c38770099b51f0a201da2d4babc7ab3a8ee886def9d6b19",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/parsing.py": "5206a0cc3dfbe9808e1a7394d7685900f3a3816772438eb42d13ed591907203c",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/user_defined_fracture_functions.py": "f502f1b78a8495dc9d9c85a84d0e113b3fecb425de695b3ea81bbb6c7c951bdf",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/verifications.py": "ca7d63d59b50c599628ae59fc479b154f3f5da9565b802fccbb58118c70b68a2",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/input_checking/write_input_file.py": "3c0f16646666c8ef757d02481e265051bc41e30677f0ca608cd14e2b076c0bc9",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/distributions.py": "588335d65781b16a9341ff567ebd9819f05b767b36c69352f397f003af553f7d",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/gather_information.py": "c0b61f4e4e197849b9a1774b2161a355593a8aa265aaebde8955021a3871c474",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/gen_output.py": "6a559fbfb96d35a6bed7b6b05eea213bf38570f5487121577bdf319cf0397eca",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/helper.py": "47388ea1467c2f6be78d3c5e6210feb6cf931a984cca59f67bba73c7de00e346",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/make_pdf.py": "ea11b1d4f2ad63d1dce988f7a5ec19e08da6c25fe166c790e7dce49bca3b91e7",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/plot_fracture_centers.py": "37877017b62d611eb596b20bc9c4c9998e1d10104fd78138f7ea389f94842f41",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/plot_fracture_orientations.py": "d41d1ac9258ad02459c3a7a0b06035ea6f3aeaae0e8f4a809604b7884a2c1daa",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/plot_fracture_radii.py": "3f0b72d492136b456ed8cd258400b6ad9dac587a7804dc5a30082d347cd52bf1",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/plot_fram_information.py": "385b178fd7851c91277faf2dfbf702c6fa868d7ff4c7ddb3f2cd8be685c6c5ba",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/output_report/plot_intersection_lengths.py": "d0bb2f8c8e2d1d917fc760e277179079eac9309c6ed9842a3da6b914c814fef9",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/generation/stress.py": "0ae726044c657c314f2f698610e26d42f46087e71777a18a5d08a11b6e8d1d3c",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/__init__.py": "bf6ea242f636ac742856b8fca590927a3e2cca307a7d51b543b747707c85e64d",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/add_attribute_to_mesh.py": "c6587a321933072fa0be430e9dd5ab759f74330ccd24cab9dabeb7ec5c5757f8",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/dfm/mesh_dfm.py": "fd05bbc27d7734f0063dab5f1c22430b3a58b8b159e93cae8a5ac806817d22f1",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/general_lagrit_scripts.py": "5f8cbf0ce71e1327a2c6d0f96ba21d9b27703485e63c78711ce3f3b9b003cd84",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/mapdfn_ecpm.py": "fd5e54815767cf3f723dd2f29fca745bad1e5c154ccc7810f03f0b7745ad41f0",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/mapdfn_effective_perm.py": "87cc580474af7a3db703de7c6dde59209b4121a8821d179b44916cae3e90716e",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/mapdfn_helper_functions.py": "899ac339576003dbd831055facb743be8a3d676190417a29e79c09550e3636cf",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/mapdfn_io.py": "f7d0b2d53badafa4bd59a3ae62e0e8aad5745b84159dba65b0c8aa5ef0210ff2",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/mapdfn_tag_cells.py": "af5de98bff605414c8304c26c1cd04b9ac1579952fe603c38bf2e24572d321c7",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/mapdfn_upscale.py": "e24e8e743eca40c70d70752a72938fed760162e5dc1da189029c78b3302e01dd",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mapdfn_ecpm/transformations.py": "f3deb504ecf8bbca8e921807acd8dafb8ea40fe3b4b16155411c2745913a3a37",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/general_lagrit_scripts.py": "5f8cbf0ce71e1327a2c6d0f96ba21d9b27703485e63c78711ce3f3b9b003cd84",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/lagrit_merge_mesh.py": "1655cc74e35ae73564c163a91122939991f34ca94a5d9f0160f2f05d16edb2f9",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/lagrit_scripts.py": "9ce5da0bf85c40bdcaf11923112ee608be47a40bf3bff95f9298b12af9a6a215",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/lagrit_scripts_poisson_disc.py": "a168b2a95634c348fd344f054e272ef1594cee65165fa69c8588e9c1268b4f28",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/mesh_dfn.py": "4a226dc9597bdb415661251f460ace945f0e98521ebbfef997568e521285d9aa",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/mesh_dfn_helper.py": "537f365fe8da066f7be9c3dda4b7859639362a1660eba502d4933ee42a5bceb8",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/poisson_driver.py": "0db508f4aad91eeecd17c0fcbea60782df946952ed146e958d3f257475483807",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/prune_mesh_scripts.py": "e5c43734475fb9d61813808786b01336f3de88a57a5c2aa0ba24cb3f0dc77859",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/mesh_dfn/run_meshing.py": "b3fb473d6abb9ab5cb080dc46188bf933b6e1425027a395ce856df6db1269d22",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/poisson_disc/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/poisson_disc/poisson_class.py": "190ed2e0c5371f26c94d2a2706ccd7e72f02b2b4f7ebf483608d81c6e58d841e",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/poisson_disc/poisson_functions.py": "fce694c4c177104e0021894c598b82a24573f3e34437a5661264853fae3a3a15",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/prune_mesh_scripts.py": "fa4abdb1c6b57bbd3bf6ceeee8cc21a5c979ae5f11b3a1262982113fc8d21063",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/udfm/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/udfm/false_connections.py": "71ecfbd2c55918371500a2e61a99da096555ab3ef0390a73ec2c8d403cf8f29f",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/udfm/map2continuum.py": "91cf7e53c2837da601b25352d7621fc1fb0d97f6446433e2818b5c3ce722da24",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/udfm/map2continuum_helper-原版.py": "511f09fedc26469721f6f39349c6151907aab220657c6e198822de807361757e",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/udfm/map2continuum_helper.py": "202dcc9a2000139558979f2ad3cdee7ea87f6f2d0cf95d40808b90b71a383ae3",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/meshing/udfm/upscale.py": "cdb4028a8166ba1740c5f3e16dbf16c870029d5ae78a031aab9bf2fa9f898719",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/well_package/__init__.py": "d28f60eb6c990fa41fc9a8456531f51b363e6fbaba8d3f4c32e7991ca3223a66",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGen/well_package/wells.py": "650e9e07304e94cbe871a14c8ad323779cb5317a3fa44272991375b48b2adecd",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/__init__.py": "d5a532471456c25994f9b7c0f3feb543dbc4788d65c4537d1fb3ab2e7b89cb67",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/bipartite_graph.py": "86ac24fa2441b5a5fe49d43e2c88bf47dcb3ecb1fcc670d65dae668aeaf98dda",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/dfn2graph.py": "57de087c05e67c9ee58e6188f09f758ab3cdeab32dbde20896fb0f88e05c9537",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/fracture_graph.py": "00e8ad686e8a9a425d21c10078e7a2b06f7e4a25e2d08c25e3046dec5c33b5b0",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/graph_attributes.py": "06e9cf2170966ca4779f6e7c8a5b105b4ccd8945bf2c78fd45db3dd4341e6073",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/graph_conversions.py": "b05dc52bdba46d13f6f064d825326693c103e7a3e90f04464e45019a323289ec",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/graph_flow.py": "61ec46656c5278396b84777c62a016615cc0f923ddfe2c3333724dcee1db9872",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/graph_tdrw.py": "f89d3c33f34c5c622bb6d38e94b4f8a47b09ca78ab6b2dd8f761490afaeac708",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/graph_transport.py": "616c77089118a388b95e9cff73d1b38ca9929e655e9e53564339acf45a2d26b2",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/intersection_graph.py": "eeaaa15c77c6d81b0ee935b4711876f8dd89c1ed67d6fbc29aea3dfb0fd5d82d",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/particle_class.py": "9f198dc74454fa22ab0eb2021ba96fb857378db0bef1a0dc6a4d18d0521200da",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/particle_io.py": "92c7c318416f8c3ba316464d80c233aa1fec34f1c3e00ec1d32de3a27b3a2e0e",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnGraph/pruning.py": "36269da365c4d4d9563fe033c4b494eb4c5db91342b3c74aa16d0230f0b78191",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnTrans/__init__.py": "5afde81552827ab1af6fc47b9c299b170c2c6f243cffcfd7971bdb99d7144065",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/dfnTrans/transport.py": "0778a331deba2e897f71c390f3bbbb6762c872d012a6ff3542b0a08dad4df513",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/__init__.py": "6848c4e75e4851c06dbd1c15d15291227dc1d437f6084688d088996183d97102",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/dfntools.py": "5f90d61aa3ac5127953507f4def2cd6abf79b67ddb95918b08afee5c43f9af86",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/dfnworks.py": "e6c9bac922747370f2f733cd5ab7e40baafc6ebd48476fbd96b47e24ca32282c",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/general_functions.py": "8a0b80c782eb027e615529871665dee6cd4b8fa1f64eb88c386dd1cc6e6724f4",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/helper_functions.py": "a4b71e9d4f5cfa3c219ad34ec372771c7aaab05f0f3d0538b4976747104cf6c9",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/images.py": "d4e04f0523b55b564aec7c7c9cfe3e63e4875a2b66c8f90f8bb9bb5a201f20b7",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/legal.py": "14444008461587083483d9f7c0fd31d207cc1e779bc0c9eb524177367eb23332",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/general/paths.py": "7c156c9119e83e208d9e1ab86999d66059695fc5f15090e94db49068c31c78e8",
+      "/root/dfnWorks-2.8/pydfnworks/pydfnworks/release.py": "765857f454131f36e8741bead7a4ba904d2598fb648e94360c9899369d36aa7e"
+    }
+  },
+  "mpi_launcher_identity": {
+    "command": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu-22.04",
+      "-u",
+      "root",
+      "--",
+      "mpirun",
+      "--version"
+    ],
+    "version": "mpirun (Open MPI) 4.1.2\n\nReport bugs to http://www.open-mpi.org/community/help/\n",
+    "implementation": "openmpi"
+  },
+  "remote_root": "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2",
+  "remote_output": "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/pflotran",
+  "cancellation_command": [
+    "wsl.exe",
+    "-d",
+    "Ubuntu-22.04",
+    "-u",
+    "root",
+    "--",
+    "/root/venvs/dfnworks-2.8/bin/python",
+    "-B",
+    "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/runtime/task_runner.py",
+    "--control",
+    "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/task_control.json",
+    "--token",
+    "pflotran-1023b829ee954e018431e8b3145446d2",
+    "--cancel"
+  ],
+  "prepared_at": "2026-11-25T16:41:23.565480+00:00",
+  "completion_status": "verified",
+  "completion_evidence": {
+    "mode": "steady_state",
+    "log": {
+      "last_time_seconds": 100000.0,
+      "last_time_value": "1.00000E+05",
+      "last_time_unit": "s",
+      "steady_converged": true,
+      "normal_end": true,
+      "error": "",
+      "lines": 134,
+      "snapshot_times_seconds": {}
+    },
+    "snapshots_found": 1
+  },
+  "final_time_seconds": 100000.0,
+  "output_files": [
+    {
+      "path": "output/model-001.vtk",
+      "size": 590823,
+      "sha256": "c864fc124c443f98981a3fdf98886dfb63de67bc2b3839e16fb9ca574353292e"
+    },
+    {
+      "path": "output/model-cellinfo-001-rank0.dat",
+      "size": 542504,
+      "sha256": "2347a6d58060bc632dd4ca8a02e0140788c19189a79a361f1f47197ecdf44926"
+    },
+    {
+      "path": "output/model-darcyvel-001-rank0.dat",
+      "size": 1751165,
+      "sha256": "bda90181d968ea5f4aed81ca50bd7467fbc71835610d01aca06289166ebd6ceb"
+    },
+    {
+      "path": "output/model-mas.dat",
+      "size": 270,
+      "sha256": "5733f20245bd79eb600ed651e0b6f510f94d9824cf6616c14ef7e6ac0839570c"
+    },
+    {
+      "path": "output/model.out",
+      "size": 3644,
+      "sha256": "878b73704a50eb366255a3c00460706c0c3a965c45712c1c1ae547214de72883"
+    },
+    {
+      "path": "output/stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "output/stdout.log",
+      "size": 4650,
+      "sha256": "e247128da55488aed02fbda575ef9c53d1f79962348c2106c68e4dadba797c95"
+    },
+    {
+      "path": "output/sync_commands.jsonl",
+      "size": 91130,
+      "sha256": "9721c6f33760ea803c7124fdeba08a3f053f1dddb73a0d5cca314a446812d85a"
+    }
+  ],
+  "output_manifest_errors": [],
+  "duration_seconds": 1.542512,
+  "final_time_source": "model.out output metadata",
+  "final_time_source_data": {
+    "key": "text.model.out.output.metadata",
+    "values": {}
+  },
+  "simulation_time_unit": "s",
+  "result_schema": "1.0",
+  "input_retention": "hashes_only",
+  "execution": {
+    "command": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu-22.04",
+      "-u",
+      "root",
+      "--cd",
+      "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/pflotran",
+      "--",
+      "/root/venvs/dfnworks-2.8/bin/python",
+      "-B",
+      "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/runtime/task_runner.py",
+      "--control",
+      "/root/FracRTMWorkspace/eacbb45b-1351-472e-8ef2-a4730800b130/runs/pflotran-1023b829ee954e018431e8b3145446d2/task_control.json",
+      "--token",
+      "pflotran-1023b829ee954e018431e8b3145446d2",
+      "--",
+      "mpirun",
+      "--allow-run-as-root",
+      "-np",
+      "1",
+      "/root/pflotran/src/pflotran/pflotran",
+      "-input_prefix",
+      "model"
+    ],
+    "status": "succeeded",
+    "started_at": "2026-11-25T16:41:23.632288+00:00",
+    "ended_at": "2026-11-25T16:41:24.477944+00:00",
+    "returncode": 0,
+    "stdout": "stdout.log",
+    "stderr": "stderr.log",
+    "error": "",
+    "local_process_id": 9544,
+    "process_outcome": "succeeded",
+    "duration_seconds": 0.8429999999998472
+  },
+  "visualization_files": [
+    {
+      "path": "visualization/generation_25bb711664964334afbd/model-000.vtu",
+      "size": 571127,
+      "sha256": "52cb71d90ce240fcb060438bf61a7b9347b6ac359b4d75bf3044d7a4ff0a6fad"
+    },
+    {
+      "path": "visualization/model.pvd",
+      "size": 309,
+      "sha256": "b96b1fc4b8ab845e4ad84402305d38681df7b9b41c6a07cf441c33b37103844f"
+    },
+    {
+      "path": "visualization/visualization_mapping.json",
+      "size": 175515,
+      "sha256": "1b0183954e2bf670da7d7f5724d3a6b9bd251386a8936f5024a7dcdd44f6edbd"
+    }
+  ],
+  "omitted_input_copies": [
+    "final_input.in",
+    "model.in",
+    "model_config.json",
+    "model_manifest.json"
+  ]
+}

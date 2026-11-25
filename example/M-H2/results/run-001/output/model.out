@@ -1,0 +1,134 @@
+
+=================
+  PFLOTRAN v4.0
+=================
+
+
+ *GRAV
+  gravity    =  [m/s^2]     0.0000E+00  0.0000E+00  0.0000E+00
+ Extent of Gridded Domain
+  X: -0.50000000000000000 - 0.50000000000000000
+  Y: -0.50000000000000000 - 0.50000000000000000
+  Z: -0.50000000000000000 - 0.50000000000000000
+
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+  Initial Condition
+
+--------------------------------------------------------------------------------
+          Flow Condition:   initial
+                  Region:   all
+--------------------------------------------------------------------------------
+
+  Flow Condition: initial
+    Synchronize time with update: no
+    Time units: yr
+    Length units: m
+      Datum:
+
+    Sub Condition: pressure
+      Type: dirichlet
+      Gradient:
+      Data:
+        Dataset: Unnamed Ascii Dataset
+          Type: dataset_ascii_type
+          Transient: no
+          Array Rank:  1
+
+--------------------------------------------------------------------------------
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+  Boundary Condition
+
+--------------------------------------------------------------------------------
+          Flow Condition:   inflow
+                  Region:   west
+--------------------------------------------------------------------------------
+
+  Flow Condition: inflow
+    Synchronize time with update: no
+    Time units: yr
+    Length units: m
+      Datum:
+
+    Sub Condition: pressure
+      Type: dirichlet
+      Gradient:
+      Data:
+        Dataset: Unnamed Ascii Dataset
+          Type: dataset_ascii_type
+          Transient: no
+          Array Rank:  1
+
+--------------------------------------------------------------------------------
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+  Boundary Condition
+
+--------------------------------------------------------------------------------
+          Flow Condition:   outflow
+                  Region:   east
+--------------------------------------------------------------------------------
+
+  Flow Condition: outflow
+    Synchronize time with update: no
+    Time units: yr
+    Length units: m
+      Datum:
+
+    Sub Condition: pressure
+      Type: dirichlet
+      Gradient:
+      Data:
+        Dataset: Unnamed Ascii Dataset
+          Type: dataset_ascii_type
+          Transient: no
+          Array Rank:  1
+
+--------------------------------------------------------------------------------
+
+ Requested processors =     1
+
+FLOW Time Stepper (steady state)
+
+FLOW Newton Solver
+atol: 1.000000E-50
+rtol: 1.000000E-08
+stol: 1.000000E-08
+dtol: 1.000000E+04
+maxnorm: 1.000000E+20
+inftolres: -9.990000E+02
+inftolupd: -9.990000E+02
+inftolrelupd: -9.990000E+02
+inftolsclres: -9.990000E+02
+max iter: 50
+min iter: 1
+maxf: 10000
+matrix type: baij
+precond. matrix type: baij
+inexact newton: off
+print convergence: on
+print detailed convergence: off
+check infinity norm: on
+
+FLOW Linear Solver
+solver: bcgs
+preconditioner: ilu
+atol: 1.000000E-50
+rtol: 1.000000E-05
+dtol: 1.000000E+04
+maximum iteration: 10000
+
+== RICHARDS FLOW ===============================================================
+  0 2r: 7.42E-02 2x: 0.00E+00 2u: 0.00E+00 ir: 5.84E-03 iu: 0.00E+00 rsn:   0
+  1 2r: 1.23E-08 2x: 9.37E+07 2u: 3.82E+06 ir: 9.67E-10 iu: 8.67E+04 rsn:   0
+  2 2r: 2.47E-16 2x: 9.37E+07 2u: 1.07E+02 ir: 1.18E-16 iu: 2.94E+00 rsn: rtol
+
+ Step      1 Time=  1.00000E+05 [s] snes_conv_reason:    3
+  newton =   2 [       2] linear =    47 [        47]
+  --> max chng: dpmx=   8.6750E+04
+
+ Wall Clock Time:  1.4966E-01 [sec]   2.4943E-03 [min]   4.1572E-05 [hr]
