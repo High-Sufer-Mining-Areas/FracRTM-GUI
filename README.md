@@ -44,7 +44,7 @@ Two example projects include model inputs and precomputed results:
 * [M-H2](example/M-H2/): Steady-state groundwater flow benchmark.
 * [B1](example/B1/): Acidic-water reactive transport in calcite-bearing fractured media.
 
-The B1 result file is stored with Git Large File Storage (Git LFS). Install Git LFS, then run `git lfs pull` from the repository root after cloning. In the GUI, choose **Project Overview → Switch Project** and select the example folder containing `project.json`.
+The B1 result file is stored in Git Large File Storage (Git LFS).
 
 ## Major Libraries
 
